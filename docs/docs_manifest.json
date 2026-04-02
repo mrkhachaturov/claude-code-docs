@@ -382,8 +382,8 @@
     "skills.md": {
       "original_url": "https://code.claude.com/docs/en/skills",
       "original_md_url": "https://code.claude.com/docs/en/skills.md",
-      "hash": "ead3fa435d9d731736c260d65fb12b952b706327ab06b11a314a2b57a1e4808e",
-      "last_updated": "2026-03-31T21:12:57.361165"
+      "hash": "e8ac43c89b84dfadc483fe51bb8c72c831b6f647ebd47c0de1fa520fa43bee82",
+      "last_updated": "2026-04-02T15:23:17.351184"
     },
     "slack.md": {
       "original_url": "https://code.claude.com/docs/en/slack",
@@ -453,8 +453,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-04-02T12:18:26.102083",
-    "fetch_duration_seconds": 44.077746,
+    "last_fetch_completed": "2026-04-02T15:23:24.545169",
+    "fetch_duration_seconds": 52.380444,
     "total_pages_discovered": 75,
     "pages_fetched_successfully": 76,
     "pages_failed": 0,
@@ -464,7 +464,7 @@
     "total_files": 75,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2026-04-02T12:18:26.102112",
+  "last_updated": "2026-04-02T15:23:24.545190",
   "base_url": "https://raw.githubusercontent.com/mrkhachaturov/claude-code-docs/main/docs/",
   "github_repository": "mrkhachaturov/claude-code-docs",
   "github_ref": "main",
