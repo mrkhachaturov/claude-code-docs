@@ -663,8 +663,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-04-12T04:03:28.615964",
-    "fetch_duration_seconds": 64.26881,
+    "last_fetch_completed": "2026-04-12T06:33:12.846322",
+    "fetch_duration_seconds": 66.564462,
     "total_pages_discovered": 110,
     "pages_fetched_successfully": 111,
     "pages_failed": 0,
@@ -674,7 +674,7 @@
     "total_files": 110,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2026-04-12T04:03:28.615991",
+  "last_updated": "2026-04-12T06:33:12.846355",
   "base_url": "https://raw.githubusercontent.com/mrkhachaturov/claude-code-docs/main/docs/",
   "github_repository": "mrkhachaturov/claude-code-docs",
   "github_ref": "main",
