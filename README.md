@@ -1,230 +1,116 @@
-# Claude Code Documentation Mirror
+# Claude Code Documentation + Knowledge Graph
 
-[![Last Update](https://img.shields.io/github/last-commit/ericbuess/claude-code-docs/main.svg?label=docs%20updated)](https://github.com/ericbuess/claude-code-docs/commits/main)
-[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-blue)]()
-[![Beta](https://img.shields.io/badge/status-early%20beta-orange)](https://github.com/ericbuess/claude-code-docs/issues)
+[![Last Update](https://img.shields.io/github/last-commit/mrkhachaturov/claude-code-docs/main.svg?label=docs%20updated)](https://github.com/mrkhachaturov/claude-code-docs/commits/main)
+[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-blue)](https://github.com/mrkhachaturov/claude-code-docs)
 
-Local mirror of Claude Code documentation files from https://docs.anthropic.com/en/docs/claude-code/, updated every 3 hours.
+Local mirror of [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/) with a [graphify](https://github.com/safishamsi/graphify) knowledge graph layer. Docs update automatically via GitHub Actions. The graph provides structured navigation so Claude can answer documentation questions from graph traversal instead of reading raw files.
 
-## ⚠️ Early Beta Notice
+Based on [ericbuess/claude-code-docs](https://github.com/ericbuess/claude-code-docs).
 
-**This is an early beta release**. There may be errors or unexpected behavior. If you encounter any issues, please [open an issue](https://github.com/ericbuess/claude-code-docs/issues) - your feedback helps improve the tool!
+## What this adds over the original
 
-## 🆕 Version 0.3.3 - Changelog Integration
-
-**New in this version:**
-- 📋 **Claude Code Changelog**: Access the official Claude Code release notes with `/docs changelog`
-- 🍎 **Full macOS compatibility**: Fixed shell compatibility issues for Mac users
-- 🐧 **Linux support**: Tested on Ubuntu, Debian, and other distributions
-- 🔧 **Improved installer**: Better handling of updates and edge cases
-
-To update:
-```bash
-curl -fsSL https://raw.githubusercontent.com/ericbuess/claude-code-docs/main/install.sh | bash
-```
-
-## Why This Exists
-
-- **Faster access** - Reads from local files instead of fetching from web
-- **Automatic updates** - Attempts to stay current with the latest documentation
-- **Track changes** - See what changed in docs over time
-- **Claude Code changelog** - Quick access to official release notes and version history
-- **Better Claude Code integration** - Allows Claude to explore documentation more effectively
-
-## Platform Compatibility
-
-- ✅ **macOS**: Fully supported (tested on macOS 12+)
-- ✅ **Linux**: Fully supported (Ubuntu, Debian, Fedora, etc.)
-- ⏳ **Windows**: Not yet supported - [contributions welcome](#contributing)!
-
-### Prerequisites
-
-This tool requires the following to be installed:
-- **git** - For cloning and updating the repository (usually pre-installed)
-- **jq** - For JSON processing in the auto-update hook (pre-installed on macOS; Linux users may need `apt install jq` or `yum install jq`)
-- **curl** - For downloading the installation script (usually pre-installed)
-- **Claude Code** - Obviously :)
+| Feature | Original (`/docs`) | This fork |
+| ------- | ------------------- | --------- |
+| Read a doc | Dumps full doc into context | Same, via `/docs` |
+| Find relevant docs | Grep or guess | Graph traversal via `/claude-code-docs` |
+| Always-on awareness | Dead PreToolUse hook | User-level rule (loads every session, ~20 lines) |
+| Navigation | Flat file list | 3-level: graph report, wiki articles, raw docs |
+| Cross-doc relationships | None | 409 edges, 24 hyperedges, 11 communities |
 
 ## Installation
 
-Run this single command:
-
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ericbuess/claude-code-docs/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mrkhachaturov/claude-code-docs/main/install.sh | bash
 ```
 
-This will:
-1. Install to `~/.claude-code-docs` (or migrate existing installation)
-2. Create the `/docs` slash command to pass arguments to the tool and tell it where to find the docs
-3. Set up a 'PreToolUse' 'Read' hook to enable automatic git pull when reading docs from the ~/.claude-code-docs`
+This installs to `~/.claude-code-docs` and sets up:
 
-**Note**: The command is `/docs (user)` - it will show in your command list with "(user)" after it to indicate it's a user-created command.
+- `~/.claude/rules/claude-code-docs.md` -- always-on graph awareness (every session)
+- `~/.claude/skills/claude-code-docs/SKILL.md` -- deep query via `/claude-code-docs`
+- `~/.claude/commands/docs.md` -- direct doc reading via `/docs`
+
+### Prerequisites
+
+- git, jq, curl
+- Claude Code
+- [graphify](https://github.com/safishamsi/graphify) (optional, for rebuilding the graph): `pip install graphifyy && graphify install`
 
 ## Usage
 
-The `/docs` command provides instant access to documentation with optional freshness checking.
+### Graph-first query (recommended)
 
-### Default: Lightning-fast access (no checks)
-```bash
-/docs hooks        # Instantly read hooks documentation
-/docs mcp          # Instantly read MCP documentation
-/docs memory       # Instantly read memory documentation
+```text
+/claude-code-docs how do hooks interact with permissions?
+/claude-code-docs what are the security layers?
+/claude-code-docs explain the settings hierarchy
 ```
 
-You'll see: `📚 Reading from local docs (run /docs -t to check freshness)`
+Claude reads the graph report, picks the relevant wiki article, and answers from structure. Only reads raw docs when exact syntax or schemas are needed.
 
-### Check documentation sync status with -t flag
-```bash
-/docs -t           # Show sync status with GitHub
-/docs -t hooks     # Check sync status, then read hooks docs
-/docs -t mcp       # Check sync status, then read MCP docs
+### Direct doc reading
+
+```text
+/docs hooks        # Read hooks.md directly
+/docs mcp          # Read mcp.md directly
+/docs what's new   # Recent documentation changes
+/docs changelog    # Claude Code release notes
+/docs -t           # Check sync status with GitHub
 ```
 
-### See what's new
-```bash
-/docs what's new   # Show recent documentation changes with diffs
+### Always-on (no command needed)
+
+The installed rule means Claude automatically knows about the graph in every session. Ask any Claude Code question and it will consult the graph before searching raw files.
+
+## How the graph works
+
+110 doc files are preprocessed (JSX/HTML noise stripped, 1,928 cross-references converted to clean markdown links), then graphify extracts a knowledge graph with deep mode.
+
+```text
+graphify-out/
+  GRAPH_REPORT.md    -- god nodes, communities, surprising connections (11k words)
+  wiki/index.md      -- entry point to 21 topic articles (~2k words each)
+  graph.json         -- queryable graph (117 nodes, 409 edges)
+  graph.html         -- interactive browser visualization
 ```
 
-### Read Claude Code changelog
-```bash
-/docs changelog    # Read official Claude Code release notes and version history
-```
+### Three navigation levels
 
-The changelog feature fetches the latest release notes directly from the official Claude Code repository, showing you what's new in each version.
+1. **Graph report** (`GRAPH_REPORT.md`) -- overview: which concepts are hubs, how topics cluster
+2. **Wiki articles** (`wiki/`) -- one article per community with key facts extracted
+3. **Raw docs** (`docs/`) -- full documentation pages, only when exact details are needed
 
-### Uninstall
-```bash
-/docs uninstall    # Get commnd to remove claude-code-docs completely
-```
+### Rebuilding the graph
 
-### Customize command name
-
-If you prefer a different command name (e.g., `/claude-docs` instead of `/docs`), you can easily customize it:
+When docs change significantly:
 
 ```bash
-# Rename the command file
-mv ~/.claude/commands/docs.md ~/.claude/commands/claude-docs.md
-
-# Now use /claude-docs instead of /docs
-/claude-docs hooks
-/claude-docs mcp
+python scripts/preprocess-for-graphify.py
+# Then in Claude Code:
+/graphify graphify-out/.preprocessed/ --mode deep --wiki
 ```
 
-You can use any name you prefer: `/cdocs`, `/claude-code-docs`, etc. The command file name determines the slash command.
+Requires `pip install graphifyy`.
 
-### Creative usage examples
-```bash
-# Natural language queries work great
-/docs what environment variables exist and how do I use them?
-/docs explain the differences between hooks and MCP
-
-# Check for recent changes
-/docs -t what's new in the latest documentation?
-/docs changelog    # Check Claude Code release notes
-
-# Search across all docs
-/docs find all mentions of authentication
-/docs how do I customize Claude Code's behavior?
-```
-
-## How Updates Work
-
-The documentation attempts to stay current:
-- GitHub Actions runs periodically to fetch new documentation
-- When you use `/docs`, it checks for updates
-- Updates are pulled when available
-- You may see "🔄 Updating documentation..." when this happens
-
-Note: If automatic updates fail, you can always run the installer again to get the latest version.
-
-## Updating from Previous Versions
-
-Regardless of which version you have installed, simply run:
+## Updating
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ericbuess/claude-code-docs/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mrkhachaturov/claude-code-docs/main/install.sh | bash
 ```
 
-The installer will handle migration and updates automatically.
-
-## Troubleshooting
-
-### Command not found
-If `/docs` returns "command not found":
-1. Check if the command file exists: `ls ~/.claude/commands/docs.md`
-2. Restart Claude Code to reload commands
-3. Re-run the installation script
-
-### Documentation not updating
-If documentation seems outdated:
-1. Run `/docs -t` to check sync status and force an update
-2. Manually update: `cd ~/.claude-code-docs && git pull`
-3. Check if GitHub Actions are running: [View Actions](https://github.com/ericbuess/claude-code-docs/actions)
-
-### Installation errors
-- **"git/jq/curl not found"**: Install the missing tool first
-- **"Failed to clone repository"**: Check your internet connection
-- **"Failed to update settings.json"**: Check file permissions on `~/.claude/settings.json`
+Or manually: `cd ~/.claude-code-docs && git pull`
 
 ## Uninstalling
 
-To completely remove the docs integration:
-
-```bash
-/docs uninstall
-```
-
-Or run:
 ```bash
 ~/.claude-code-docs/uninstall.sh
 ```
 
-See [UNINSTALL.md](UNINSTALL.md) for manual uninstall instructions.
+Also remove:
 
-## Security Notes
-
-- The installer modifies `~/.claude/settings.json` to add an auto-update hook
-- The hook only runs `git pull` when reading documentation files
-- All operations are limited to the documentation directory
-- No data is sent externally - everything is local
-- **Repository Trust**: The installer clones from GitHub over HTTPS. For additional security, you can:
-  - Fork the repository and install from your own fork
-  - Clone manually and run the installer from the local directory
-  - Review all code before installation
-
-## What's New
-
-### v0.3.3 (Latest)
-- Added Claude Code changelog integration (`/docs changelog`)
-- Fixed shell compatibility for macOS users (zsh/bash)
-- Improved documentation and error messages
-- Added platform compatibility badges
-
-### v0.3.2
-- Fixed automatic update functionality  
-- Improved handling of local repository changes
-- Better error recovery during updates
-
-## Contributing
-
-**Contributions are welcome!** This is a community project and we'd love your help:
-
-- 🪟 **Windows Support**: Want to help add Windows compatibility? [Fork the repository](https://github.com/ericbuess/claude-code-docs/fork) and submit a PR!
-- 🐛 **Bug Reports**: Found something not working? [Open an issue](https://github.com/ericbuess/claude-code-docs/issues)
-- 💡 **Feature Requests**: Have an idea? [Start a discussion](https://github.com/ericbuess/claude-code-docs/issues)
-- 📝 **Documentation**: Help improve docs or add examples
-
-You can also use Claude Code itself to help build features - just fork the repo and let Claude assist you!
-
-## Known Issues
-
-As this is an early beta, you might encounter some issues:
-- Auto-updates may occasionally fail on some network configurations
-- Some documentation links might not resolve correctly
-
-If you find any issues not listed here, please [report them](https://github.com/ericbuess/claude-code-docs/issues)!
+- `~/.claude/rules/claude-code-docs.md`
+- `~/.claude/skills/claude-code-docs/`
 
 ## License
 
 Documentation content belongs to Anthropic.
-This mirror tool is open source - contributions welcome!
+Knowledge graph tooling is open source.
