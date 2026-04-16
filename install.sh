@@ -384,6 +384,30 @@ fi
 echo ""
 echo "Setting up Claude Code Docs v0.1.0..."
 
+# Resolve Python interpreter for graph traversal (needs NetworkX)
+echo "Resolving Python interpreter..."
+GRAPHIFY_BIN=$(which graphify 2>/dev/null)
+if [ -n "$GRAPHIFY_BIN" ]; then
+    GRAPHIFY_PYTHON=$(head -1 "$GRAPHIFY_BIN" | tr -d '#!')
+    case "$GRAPHIFY_PYTHON" in
+        *[!a-zA-Z0-9/_.-]*) GRAPHIFY_PYTHON="" ;;
+    esac
+    if [ -n "$GRAPHIFY_PYTHON" ] && ! "$GRAPHIFY_PYTHON" -c "import networkx" 2>/dev/null; then
+        GRAPHIFY_PYTHON=""
+    fi
+fi
+if [ -z "${GRAPHIFY_PYTHON:-}" ]; then
+    if python3 -c "import networkx" 2>/dev/null; then
+        GRAPHIFY_PYTHON="python3"
+    else
+        echo "  ⚠️  NetworkX not found. Graph queries require: pip install graphifyy"
+        GRAPHIFY_PYTHON="python3"
+    fi
+fi
+mkdir -p "$INSTALL_DIR/graphify-out"
+echo "$GRAPHIFY_PYTHON" > "$INSTALL_DIR/graphify-out/.graphify_python"
+echo "✓ Python: $GRAPHIFY_PYTHON"
+
 # Copy helper script from template
 echo "Installing helper script..."
 if [[ -f "$INSTALL_DIR/scripts/claude-docs-helper.sh.template" ]]; then
