@@ -20,6 +20,14 @@ env/
 .DS_Store
 Thumbs.db
 
+# Local working directory
+.local/
+
+# Graphify temp files (graph output is committed, temp files are not)
+graphify-out/.graphify_*
+graphify-out/.preprocessed/
+graphify-out/cache/
+
 # Project specific
 *.log
 .claude/settings.local.json

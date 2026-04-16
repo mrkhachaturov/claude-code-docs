@@ -1,0 +1,5775 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "sdk_dual_language_implementation",
+        "label": "Python and TypeScript SDK Parallel Implementations",
+        "nodes": [
+          "agent-sdk__python",
+          "agent-sdk__typescript",
+          "agent-sdk__overview",
+          "agent-sdk__quickstart"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.95
+      },
+      {
+        "id": "agent_loop_execution_lifecycle",
+        "label": "Agent Loop Execution Lifecycle (turns, messages, tools, result)",
+        "nodes": [
+          "agent-sdk__agent-loop",
+          "agent-sdk__hooks",
+          "agent-sdk__permissions",
+          "agent-sdk__cost-tracking",
+          "overview_result_message",
+          "overview_builtin_tools"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.9
+      },
+      {
+        "id": "session_continuity_patterns",
+        "label": "Session Continuity Patterns (resume, continue, fork, V2 sessions)",
+        "nodes": [
+          "agent-sdk__sessions",
+          "overview_claude_sdk_client",
+          "overview_v2_session",
+          "agent-sdk__typescript-v2-preview"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85
+      },
+      {
+        "id": "tool_extensibility",
+        "label": "Tool Extensibility System",
+        "nodes": [
+          "agent-sdk__custom-tools",
+          "agent-sdk__mcp",
+          "agent-sdk__tool-search"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9
+      },
+      {
+        "id": "security_and_permissions",
+        "label": "Security and Permissions Layer",
+        "nodes": [
+          "agent-sdk__permissions",
+          "agent-sdk__hooks",
+          "agent-sdk__secure-deployment"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85
+      },
+      {
+        "id": "agent_composition",
+        "label": "Agent Composition and Extension",
+        "nodes": [
+          "agent-sdk__subagents",
+          "agent-sdk__skills",
+          "agent-sdk__plugins"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85
+      },
+      {
+        "id": "he_security_layer",
+        "label": "Security and access control layer",
+        "nodes": [
+          "permissions",
+          "permission-modes",
+          "sandboxing",
+          "security",
+          "hooks"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9
+      },
+      {
+        "id": "he_data_governance",
+        "label": "Data governance and compliance",
+        "nodes": [
+          "data-usage",
+          "zero-data-retention",
+          "legal-and-compliance"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9
+      },
+      {
+        "id": "he_trust_and_auth",
+        "label": "Trust, authentication, and privacy",
+        "nodes": [
+          "authentication",
+          "security",
+          "data-usage",
+          "legal-and-compliance"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85
+      },
+      {
+        "id": "he_plugin_ecosystem",
+        "label": "Plugin Ecosystem",
+        "nodes": [
+          "plugins",
+          "plugins-reference",
+          "plugin-marketplaces",
+          "discover-plugins"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0
+      },
+      {
+        "id": "he_extensibility_layer",
+        "label": "Claude Code Extensibility Layer",
+        "nodes": [
+          "mcp",
+          "plugins",
+          "skills",
+          "channels",
+          "tools-reference"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85
+      },
+      {
+        "id": "he_agent_orchestration",
+        "label": "Agent Orchestration System",
+        "nodes": [
+          "sub-agents",
+          "agent-teams",
+          "skills",
+          "routines"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.8
+      },
+      {
+        "id": "he-config-hierarchy",
+        "label": "Configuration Hierarchy",
+        "nodes": [
+          "settings",
+          "server-managed-settings",
+          "env-vars",
+          "claude-directory"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9
+      },
+      {
+        "id": "he-model-performance",
+        "label": "Model and Performance Tuning",
+        "nodes": [
+          "model-config",
+          "fast-mode",
+          "context-window"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85
+      },
+      {
+        "id": "he-ui-customization",
+        "label": "UI Customization",
+        "nodes": [
+          "terminal-config",
+          "keybindings",
+          "statusline",
+          "output-styles"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85
+      },
+      {
+        "id": "he_cloud_providers",
+        "label": "Third-party cloud provider integrations",
+        "nodes": [
+          "amazon-bedrock",
+          "google-vertex-ai",
+          "microsoft-foundry",
+          "third-party-integrations",
+          "llm-gateway"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9
+      },
+      {
+        "id": "he_ide_integrations",
+        "label": "IDE and editor integrations for Claude Code",
+        "nodes": [
+          "vs-code",
+          "jetbrains",
+          "desktop",
+          "platforms"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9
+      },
+      {
+        "id": "he_web_cloud_sessions",
+        "label": "Web and cloud session ecosystem",
+        "nodes": [
+          "claude-code-on-the-web",
+          "web-quickstart",
+          "slack",
+          "desktop-scheduled-tasks"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85
+      },
+      {
+        "id": "getting-started-journey",
+        "label": "Getting Started Journey",
+        "nodes": [
+          "overview",
+          "quickstart",
+          "setup"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9
+      },
+      {
+        "id": "core-usage-patterns",
+        "label": "Core Usage Patterns",
+        "nodes": [
+          "common-workflows",
+          "best-practices",
+          "how-claude-code-works",
+          "interactive-mode",
+          "cli-reference"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85
+      },
+      {
+        "id": "terminal-experience-features",
+        "label": "Terminal Experience Features",
+        "nodes": [
+          "interactive-mode",
+          "voice-dictation",
+          "fullscreen",
+          "cli-reference"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85
+      },
+      {
+        "id": "he_ops_monitoring",
+        "label": "Operations and cost monitoring",
+        "nodes": [
+          "costs",
+          "monitoring-usage",
+          "analytics"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9
+      },
+      {
+        "id": "he_ci_cd_integration",
+        "label": "CI/CD platform integrations",
+        "nodes": [
+          "github-actions",
+          "gitlab-ci-cd",
+          "github-enterprise-server"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9
+      },
+      {
+        "id": "he_remote_access",
+        "label": "Remote and cloud session access",
+        "nodes": [
+          "remote-control",
+          "ultraplan",
+          "scheduled-tasks"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "Agent SDK Overview",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "source_location": null,
+      "id": "agent-sdk__overview",
+      "community": 0,
+      "norm_label": "agent sdk overview"
+    },
+    {
+      "label": "Agent SDK Quickstart",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "source_location": null,
+      "id": "agent-sdk__quickstart",
+      "community": 0,
+      "norm_label": "agent sdk quickstart"
+    },
+    {
+      "label": "Agent SDK Reference - Python",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__python.md",
+      "source_location": null,
+      "id": "agent-sdk__python",
+      "community": 0,
+      "norm_label": "agent sdk reference - python"
+    },
+    {
+      "label": "Agent SDK Reference - TypeScript",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__typescript.md",
+      "source_location": null,
+      "id": "agent-sdk__typescript",
+      "community": 0,
+      "norm_label": "agent sdk reference - typescript"
+    },
+    {
+      "label": "TypeScript SDK V2 Interface (Preview)",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__typescript-v2-preview.md",
+      "source_location": null,
+      "id": "agent-sdk__typescript-v2-preview",
+      "community": 0,
+      "norm_label": "typescript sdk v2 interface (preview)"
+    },
+    {
+      "label": "Migrate to Claude Agent SDK",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__migration-guide.md",
+      "source_location": null,
+      "id": "agent-sdk__migration-guide",
+      "community": 0,
+      "norm_label": "migrate to claude agent sdk"
+    },
+    {
+      "label": "How the Agent Loop Works",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "source_location": null,
+      "id": "agent-sdk__agent-loop",
+      "community": 0,
+      "norm_label": "how the agent loop works"
+    },
+    {
+      "label": "Work with Sessions",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__sessions.md",
+      "source_location": null,
+      "id": "agent-sdk__sessions",
+      "community": 0,
+      "norm_label": "work with sessions"
+    },
+    {
+      "label": "Stream Responses in Real-Time",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__streaming-output.md",
+      "source_location": null,
+      "id": "agent-sdk__streaming-output",
+      "community": 0,
+      "norm_label": "stream responses in real-time"
+    },
+    {
+      "label": "Streaming Input vs Single Message Input",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__streaming-vs-single-mode.md",
+      "source_location": null,
+      "id": "agent-sdk__streaming-vs-single-mode",
+      "community": 0,
+      "norm_label": "streaming input vs single message input"
+    },
+    {
+      "label": "Get Structured Output from Agents",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__structured-outputs.md",
+      "source_location": null,
+      "id": "agent-sdk__structured-outputs",
+      "community": 0,
+      "norm_label": "get structured output from agents"
+    },
+    {
+      "label": "Handle Approvals and User Input",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__user-input.md",
+      "source_location": null,
+      "id": "agent-sdk__user-input",
+      "community": 0,
+      "norm_label": "handle approvals and user input"
+    },
+    {
+      "label": "Modifying System Prompts",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__modifying-system-prompts.md",
+      "source_location": null,
+      "id": "agent-sdk__modifying-system-prompts",
+      "community": 0,
+      "norm_label": "modifying system prompts"
+    },
+    {
+      "label": "Track Cost and Usage",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__cost-tracking.md",
+      "source_location": null,
+      "id": "agent-sdk__cost-tracking",
+      "community": 0,
+      "norm_label": "track cost and usage"
+    },
+    {
+      "label": "Control Execution with Hooks",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__hooks.md",
+      "source_location": null,
+      "id": "agent-sdk__hooks",
+      "community": 0,
+      "norm_label": "control execution with hooks"
+    },
+    {
+      "label": "Agent SDK Permissions",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__permissions.md",
+      "source_location": null,
+      "id": "agent-sdk__permissions",
+      "community": 0,
+      "norm_label": "agent sdk permissions"
+    },
+    {
+      "label": "Agent SDK MCP Integration",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__mcp.md",
+      "source_location": null,
+      "id": "agent-sdk__mcp",
+      "community": 0,
+      "norm_label": "agent sdk mcp integration"
+    },
+    {
+      "label": "Agent SDK Subagents",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__subagents.md",
+      "source_location": null,
+      "id": "agent-sdk__subagents",
+      "community": 0,
+      "norm_label": "agent sdk subagents"
+    },
+    {
+      "label": "Agent SDK Custom Tools",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__custom-tools.md",
+      "source_location": null,
+      "id": "agent-sdk__custom-tools",
+      "community": 0,
+      "norm_label": "agent sdk custom tools"
+    },
+    {
+      "label": "Agent SDK Hosting",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__hosting.md",
+      "source_location": null,
+      "id": "agent-sdk__hosting",
+      "community": 0,
+      "norm_label": "agent sdk hosting"
+    },
+    {
+      "label": "Agent SDK Skills",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__skills.md",
+      "source_location": null,
+      "id": "agent-sdk__skills",
+      "community": 0,
+      "norm_label": "agent sdk skills"
+    },
+    {
+      "label": "Agent SDK Slash Commands",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__slash-commands.md",
+      "source_location": null,
+      "id": "agent-sdk__slash-commands",
+      "community": 0,
+      "norm_label": "agent sdk slash commands"
+    },
+    {
+      "label": "Agent SDK Plugins",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__plugins.md",
+      "source_location": null,
+      "id": "agent-sdk__plugins",
+      "community": 0,
+      "norm_label": "agent sdk plugins"
+    },
+    {
+      "label": "Agent SDK Claude Code Features",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__claude-code-features.md",
+      "source_location": null,
+      "id": "agent-sdk__claude-code-features",
+      "community": 0,
+      "norm_label": "agent sdk claude code features"
+    },
+    {
+      "label": "Agent SDK File Checkpointing",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__file-checkpointing.md",
+      "source_location": null,
+      "id": "agent-sdk__file-checkpointing",
+      "community": 0,
+      "norm_label": "agent sdk file checkpointing"
+    },
+    {
+      "label": "Amazon Bedrock Setup",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/amazon-bedrock.md",
+      "source_location": null,
+      "id": "amazon-bedrock",
+      "community": 1,
+      "norm_label": "amazon bedrock setup"
+    },
+    {
+      "label": "Google Vertex AI Setup",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/google-vertex-ai.md",
+      "source_location": null,
+      "id": "google-vertex-ai",
+      "community": 1,
+      "norm_label": "google vertex ai setup"
+    },
+    {
+      "label": "Microsoft Azure AI Foundry Setup",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/microsoft-foundry.md",
+      "source_location": null,
+      "id": "microsoft-foundry",
+      "community": 1,
+      "norm_label": "microsoft azure ai foundry setup"
+    },
+    {
+      "label": "How Claude Code Works",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/how-claude-code-works.md",
+      "source_location": null,
+      "id": "how-claude-code-works",
+      "community": 5,
+      "norm_label": "how claude code works"
+    },
+    {
+      "label": "query() Function",
+      "file_type": "concept",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "source_location": null,
+      "id": "overview_query_function",
+      "community": 6,
+      "norm_label": "query() function"
+    },
+    {
+      "label": "ClaudeSDKClient (Python)",
+      "file_type": "concept",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__python.md",
+      "source_location": null,
+      "id": "overview_claude_sdk_client",
+      "community": 6,
+      "norm_label": "claudesdkclient (python)"
+    },
+    {
+      "label": "Built-in Tools (Read, Edit, Write, Bash, Glob, Grep, etc.)",
+      "file_type": "concept",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "source_location": null,
+      "id": "overview_builtin_tools",
+      "community": 7,
+      "norm_label": "built-in tools (read, edit, write, bash, glob, grep, etc.)"
+    },
+    {
+      "label": "ResultMessage / SDKResultMessage",
+      "file_type": "concept",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "source_location": null,
+      "id": "overview_result_message",
+      "community": 8,
+      "norm_label": "resultmessage / sdkresultmessage"
+    },
+    {
+      "label": "Permission Modes (default, acceptEdits, dontAsk, auto, bypassPermissions)",
+      "file_type": "concept",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "source_location": null,
+      "id": "overview_permission_modes",
+      "community": 9,
+      "norm_label": "permission modes (default, acceptedits, dontask, auto, bypasspermissions)"
+    },
+    {
+      "label": "Context Window and Compaction",
+      "file_type": "concept",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "source_location": null,
+      "id": "overview_context_window",
+      "community": 10,
+      "norm_label": "context window and compaction"
+    },
+    {
+      "label": "V2 Session (createSession/send/stream)",
+      "file_type": "concept",
+      "source_file": "graphify-out/.preprocessed/agent-sdk__typescript-v2-preview.md",
+      "source_location": null,
+      "id": "overview_v2_session",
+      "community": 6,
+      "norm_label": "v2 session (createsession/send/stream)"
+    },
+    {
+      "label": "Observability with OpenTelemetry",
+      "file_type": "document",
+      "source_file": "agent-sdk__observability.md",
+      "source_location": null,
+      "id": "agent-sdk__observability",
+      "community": 0,
+      "norm_label": "observability with opentelemetry"
+    },
+    {
+      "label": "Secure Deployment",
+      "file_type": "document",
+      "source_file": "agent-sdk__secure-deployment.md",
+      "source_location": null,
+      "id": "agent-sdk__secure-deployment",
+      "community": 4,
+      "norm_label": "secure deployment"
+    },
+    {
+      "label": "Todo Tracking",
+      "file_type": "document",
+      "source_file": "agent-sdk__todo-tracking.md",
+      "source_location": null,
+      "id": "agent-sdk__todo-tracking",
+      "community": 0,
+      "norm_label": "todo tracking"
+    },
+    {
+      "label": "Tool Search",
+      "file_type": "document",
+      "source_file": "agent-sdk__tool-search.md",
+      "source_location": null,
+      "id": "agent-sdk__tool-search",
+      "community": 0,
+      "norm_label": "tool search"
+    },
+    {
+      "label": "Claude Code Hooks Reference",
+      "file_type": "document",
+      "source_file": "hooks.md",
+      "source_location": null,
+      "id": "hooks",
+      "community": 4,
+      "norm_label": "claude code hooks reference"
+    },
+    {
+      "label": "Claude Code Hooks Guide",
+      "file_type": "document",
+      "source_file": "hooks-guide.md",
+      "source_location": null,
+      "id": "hooks-guide",
+      "community": 4,
+      "norm_label": "claude code hooks guide"
+    },
+    {
+      "label": "Settings",
+      "file_type": "document",
+      "source_file": "settings.md",
+      "source_location": null,
+      "id": "settings",
+      "community": 2,
+      "norm_label": "settings"
+    },
+    {
+      "label": "Monitoring Usage",
+      "file_type": "document",
+      "source_file": "monitoring-usage.md",
+      "source_location": null,
+      "id": "monitoring-usage",
+      "community": 2,
+      "norm_label": "monitoring usage"
+    },
+    {
+      "label": "Security",
+      "file_type": "document",
+      "source_file": "security.md",
+      "source_location": null,
+      "id": "security",
+      "community": 4,
+      "norm_label": "security"
+    },
+    {
+      "label": "Permissions",
+      "file_type": "document",
+      "source_file": "permissions.md",
+      "source_location": null,
+      "id": "permissions",
+      "community": 4,
+      "norm_label": "permissions"
+    },
+    {
+      "label": "Sandboxing",
+      "file_type": "document",
+      "source_file": "sandboxing.md",
+      "source_location": null,
+      "id": "sandboxing",
+      "community": 4,
+      "norm_label": "sandboxing"
+    },
+    {
+      "label": "Plugins",
+      "file_type": "document",
+      "source_file": "plugins.md",
+      "source_location": null,
+      "id": "plugins",
+      "community": 3,
+      "norm_label": "plugins"
+    },
+    {
+      "label": "Plugins Reference",
+      "file_type": "document",
+      "source_file": "plugins-reference.md",
+      "source_location": null,
+      "id": "plugins-reference",
+      "community": 3,
+      "norm_label": "plugins reference"
+    },
+    {
+      "label": "Agent Skills in Claude Code",
+      "file_type": "document",
+      "source_file": "skills.md",
+      "source_location": null,
+      "id": "skills",
+      "community": 3,
+      "norm_label": "agent skills in claude code"
+    },
+    {
+      "label": "Claude Code Subagents",
+      "file_type": "document",
+      "source_file": "sub-agents.md",
+      "source_location": null,
+      "id": "sub-agents",
+      "community": 3,
+      "norm_label": "claude code subagents"
+    },
+    {
+      "label": "Manage Claude's Memory",
+      "file_type": "document",
+      "source_file": "memory.md",
+      "source_location": null,
+      "id": "memory",
+      "community": 3,
+      "norm_label": "manage claude's memory"
+    },
+    {
+      "label": "Extend Claude Code",
+      "file_type": "document",
+      "source_file": "features-overview.md",
+      "source_location": null,
+      "id": "features-overview",
+      "community": 5,
+      "norm_label": "extend claude code"
+    },
+    {
+      "label": "Agent Teams",
+      "file_type": "document",
+      "source_file": "agent-teams.md",
+      "source_location": null,
+      "id": "agent-teams",
+      "community": 3,
+      "norm_label": "agent teams"
+    },
+    {
+      "label": "Permission Modes",
+      "file_type": "document",
+      "source_file": "permission-modes.md",
+      "source_location": null,
+      "id": "permission-modes",
+      "community": 4,
+      "norm_label": "permission modes"
+    },
+    {
+      "label": "CLI Reference",
+      "file_type": "document",
+      "source_file": "cli-reference.md",
+      "source_location": null,
+      "id": "cli-reference",
+      "community": 5,
+      "norm_label": "cli reference"
+    },
+    {
+      "label": "Authentication",
+      "file_type": "document",
+      "source_file": "authentication.md",
+      "source_location": null,
+      "id": "authentication",
+      "community": 4,
+      "norm_label": "authentication"
+    },
+    {
+      "label": "Data usage",
+      "file_type": "document",
+      "source_file": "data-usage.md",
+      "source_location": null,
+      "id": "data-usage",
+      "community": 4,
+      "norm_label": "data usage"
+    },
+    {
+      "label": "Zero data retention",
+      "file_type": "document",
+      "source_file": "zero-data-retention.md",
+      "source_location": null,
+      "id": "zero-data-retention",
+      "community": 4,
+      "norm_label": "zero data retention"
+    },
+    {
+      "label": "Legal and compliance",
+      "file_type": "document",
+      "source_file": "legal-and-compliance.md",
+      "source_location": null,
+      "id": "legal-and-compliance",
+      "community": 4,
+      "norm_label": "legal and compliance"
+    },
+    {
+      "label": "MCP (Model Context Protocol)",
+      "file_type": "document",
+      "source_file": "mcp.md",
+      "source_location": null,
+      "id": "mcp",
+      "community": 3,
+      "norm_label": "mcp (model context protocol)"
+    },
+    {
+      "label": "Plugin Marketplaces",
+      "file_type": "document",
+      "source_file": "plugin-marketplaces.md",
+      "source_location": null,
+      "id": "plugin-marketplaces",
+      "community": 3,
+      "norm_label": "plugin marketplaces"
+    },
+    {
+      "label": "Discover and Install Plugins",
+      "file_type": "document",
+      "source_file": "discover-plugins.md",
+      "source_location": null,
+      "id": "discover-plugins",
+      "community": 3,
+      "norm_label": "discover and install plugins"
+    },
+    {
+      "label": "Channels",
+      "file_type": "document",
+      "source_file": "channels.md",
+      "source_location": null,
+      "id": "channels",
+      "community": 3,
+      "norm_label": "channels"
+    },
+    {
+      "label": "Channels Reference",
+      "file_type": "document",
+      "source_file": "channels-reference.md",
+      "source_location": null,
+      "id": "channels-reference",
+      "community": 3,
+      "norm_label": "channels reference"
+    },
+    {
+      "label": "Tools Reference",
+      "file_type": "document",
+      "source_file": "tools-reference.md",
+      "source_location": null,
+      "id": "tools-reference",
+      "community": 3,
+      "norm_label": "tools reference"
+    },
+    {
+      "label": "Commands",
+      "file_type": "document",
+      "source_file": "commands.md",
+      "source_location": null,
+      "id": "commands",
+      "community": 3,
+      "norm_label": "commands"
+    },
+    {
+      "label": "Routines",
+      "file_type": "document",
+      "source_file": "routines.md",
+      "source_location": null,
+      "id": "routines",
+      "community": 3,
+      "norm_label": "routines"
+    },
+    {
+      "label": "Server-Managed Settings",
+      "file_type": "document",
+      "source_file": "server-managed-settings.md",
+      "source_location": null,
+      "id": "server-managed-settings",
+      "community": 2,
+      "norm_label": "server-managed settings"
+    },
+    {
+      "label": "Environment Variables",
+      "file_type": "document",
+      "source_file": "env-vars.md",
+      "source_location": null,
+      "id": "env-vars",
+      "community": 2,
+      "norm_label": "environment variables"
+    },
+    {
+      "label": "Model Configuration",
+      "file_type": "document",
+      "source_file": "model-config.md",
+      "source_location": null,
+      "id": "model-config",
+      "community": 2,
+      "norm_label": "model configuration"
+    },
+    {
+      "label": "Network Configuration",
+      "file_type": "document",
+      "source_file": "network-config.md",
+      "source_location": null,
+      "id": "network-config",
+      "community": 2,
+      "norm_label": "network configuration"
+    },
+    {
+      "label": "Terminal Configuration",
+      "file_type": "document",
+      "source_file": "terminal-config.md",
+      "source_location": null,
+      "id": "terminal-config",
+      "community": 2,
+      "norm_label": "terminal configuration"
+    },
+    {
+      "label": "Keybindings",
+      "file_type": "document",
+      "source_file": "keybindings.md",
+      "source_location": null,
+      "id": "keybindings",
+      "community": 2,
+      "norm_label": "keybindings"
+    },
+    {
+      "label": "Output Styles",
+      "file_type": "document",
+      "source_file": "output-styles.md",
+      "source_location": null,
+      "id": "output-styles",
+      "community": 2,
+      "norm_label": "output styles"
+    },
+    {
+      "label": "Status Line",
+      "file_type": "document",
+      "source_file": "statusline.md",
+      "source_location": null,
+      "id": "statusline",
+      "community": 2,
+      "norm_label": "status line"
+    },
+    {
+      "label": "Fast Mode",
+      "file_type": "document",
+      "source_file": "fast-mode.md",
+      "source_location": null,
+      "id": "fast-mode",
+      "community": 2,
+      "norm_label": "fast mode"
+    },
+    {
+      "label": "Context Window",
+      "file_type": "document",
+      "source_file": "context-window.md",
+      "source_location": null,
+      "id": "context-window",
+      "community": 2,
+      "norm_label": "context window"
+    },
+    {
+      "label": "Checkpointing",
+      "file_type": "document",
+      "source_file": "checkpointing.md",
+      "source_location": null,
+      "id": "checkpointing",
+      "community": 2,
+      "norm_label": "checkpointing"
+    },
+    {
+      "label": "Claude Directory Explorer",
+      "file_type": "document",
+      "source_file": "claude-directory.md",
+      "source_location": null,
+      "id": "claude-directory",
+      "community": 2,
+      "norm_label": "claude directory explorer"
+    },
+    {
+      "label": "Use Claude Code in VS Code",
+      "file_type": "document",
+      "source_file": "vs-code.md",
+      "source_location": null,
+      "id": "vs-code",
+      "community": 1,
+      "norm_label": "use claude code in vs code"
+    },
+    {
+      "label": "JetBrains IDEs",
+      "file_type": "document",
+      "source_file": "jetbrains.md",
+      "source_location": null,
+      "id": "jetbrains",
+      "community": 1,
+      "norm_label": "jetbrains ides"
+    },
+    {
+      "label": "Use Claude Code Desktop",
+      "file_type": "document",
+      "source_file": "desktop.md",
+      "source_location": null,
+      "id": "desktop",
+      "community": 1,
+      "norm_label": "use claude code desktop"
+    },
+    {
+      "label": "Get started with the desktop app",
+      "file_type": "document",
+      "source_file": "desktop-quickstart.md",
+      "source_location": null,
+      "id": "desktop-quickstart",
+      "community": 1,
+      "norm_label": "get started with the desktop app"
+    },
+    {
+      "label": "Schedule recurring tasks in Claude Code Desktop",
+      "file_type": "document",
+      "source_file": "desktop-scheduled-tasks.md",
+      "source_location": null,
+      "id": "desktop-scheduled-tasks",
+      "community": 1,
+      "norm_label": "schedule recurring tasks in claude code desktop"
+    },
+    {
+      "label": "Use Claude Code with Chrome (beta)",
+      "file_type": "document",
+      "source_file": "chrome.md",
+      "source_location": null,
+      "id": "chrome",
+      "community": 1,
+      "norm_label": "use claude code with chrome (beta)"
+    },
+    {
+      "label": "Use Claude Code on the web",
+      "file_type": "document",
+      "source_file": "claude-code-on-the-web.md",
+      "source_location": null,
+      "id": "claude-code-on-the-web",
+      "community": 1,
+      "norm_label": "use claude code on the web"
+    },
+    {
+      "label": "Get started with Claude Code on the web",
+      "file_type": "document",
+      "source_file": "web-quickstart.md",
+      "source_location": null,
+      "id": "web-quickstart",
+      "community": 1,
+      "norm_label": "get started with claude code on the web"
+    },
+    {
+      "label": "Platforms and integrations",
+      "file_type": "document",
+      "source_file": "platforms.md",
+      "source_location": null,
+      "id": "platforms",
+      "community": 1,
+      "norm_label": "platforms and integrations"
+    },
+    {
+      "label": "Enterprise deployment overview",
+      "file_type": "document",
+      "source_file": "third-party-integrations.md",
+      "source_location": null,
+      "id": "third-party-integrations",
+      "community": 1,
+      "norm_label": "enterprise deployment overview"
+    },
+    {
+      "label": "Claude Code in Slack",
+      "file_type": "document",
+      "source_file": "slack.md",
+      "source_location": null,
+      "id": "slack",
+      "community": 1,
+      "norm_label": "claude code in slack"
+    },
+    {
+      "label": "LLM gateway configuration",
+      "file_type": "document",
+      "source_file": "llm-gateway.md",
+      "source_location": null,
+      "id": "llm-gateway",
+      "community": 1,
+      "norm_label": "llm gateway configuration"
+    },
+    {
+      "label": "Claude Code Overview",
+      "file_type": "document",
+      "source_file": "overview.md",
+      "source_location": null,
+      "id": "overview",
+      "community": 5,
+      "norm_label": "claude code overview"
+    },
+    {
+      "label": "Quickstart",
+      "file_type": "document",
+      "source_file": "quickstart.md",
+      "source_location": null,
+      "id": "quickstart",
+      "community": 5,
+      "norm_label": "quickstart"
+    },
+    {
+      "label": "Advanced Setup",
+      "file_type": "document",
+      "source_file": "setup.md",
+      "source_location": null,
+      "id": "setup",
+      "community": 5,
+      "norm_label": "advanced setup"
+    },
+    {
+      "label": "Common Workflows",
+      "file_type": "document",
+      "source_file": "common-workflows.md",
+      "source_location": null,
+      "id": "common-workflows",
+      "community": 5,
+      "norm_label": "common workflows"
+    },
+    {
+      "label": "Best Practices",
+      "file_type": "document",
+      "source_file": "best-practices.md",
+      "source_location": null,
+      "id": "best-practices",
+      "community": 5,
+      "norm_label": "best practices"
+    },
+    {
+      "label": "Interactive Mode",
+      "file_type": "document",
+      "source_file": "interactive-mode.md",
+      "source_location": null,
+      "id": "interactive-mode",
+      "community": 1,
+      "norm_label": "interactive mode"
+    },
+    {
+      "label": "Code Review",
+      "file_type": "document",
+      "source_file": "code-review.md",
+      "source_location": null,
+      "id": "code-review",
+      "community": 5,
+      "norm_label": "code review"
+    },
+    {
+      "label": "Computer Use",
+      "file_type": "document",
+      "source_file": "computer-use.md",
+      "source_location": null,
+      "id": "computer-use",
+      "community": 1,
+      "norm_label": "computer use"
+    },
+    {
+      "label": "Headless / Programmatic Mode",
+      "file_type": "document",
+      "source_file": "headless.md",
+      "source_location": null,
+      "id": "headless",
+      "community": 5,
+      "norm_label": "headless / programmatic mode"
+    },
+    {
+      "label": "Development Containers",
+      "file_type": "document",
+      "source_file": "devcontainer.md",
+      "source_location": null,
+      "id": "devcontainer",
+      "community": 5,
+      "norm_label": "development containers"
+    },
+    {
+      "label": "Voice Dictation",
+      "file_type": "document",
+      "source_file": "voice-dictation.md",
+      "source_location": null,
+      "id": "voice-dictation",
+      "community": 1,
+      "norm_label": "voice dictation"
+    },
+    {
+      "label": "Fullscreen Rendering",
+      "file_type": "document",
+      "source_file": "fullscreen.md",
+      "source_location": null,
+      "id": "fullscreen",
+      "community": 1,
+      "norm_label": "fullscreen rendering"
+    },
+    {
+      "label": "Manage costs effectively",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "source_location": null,
+      "id": "costs",
+      "community": 2,
+      "norm_label": "manage costs effectively"
+    },
+    {
+      "label": "Track team usage with analytics",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/analytics.md",
+      "source_location": null,
+      "id": "analytics",
+      "community": 2,
+      "norm_label": "track team usage with analytics"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "source_location": null,
+      "id": "troubleshooting",
+      "community": 2,
+      "norm_label": "troubleshooting"
+    },
+    {
+      "label": "Run prompts on a schedule",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/scheduled-tasks.md",
+      "source_location": null,
+      "id": "scheduled-tasks",
+      "community": 3,
+      "norm_label": "run prompts on a schedule"
+    },
+    {
+      "label": "Continue local sessions from any device with Remote Control",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "source_location": null,
+      "id": "remote-control",
+      "community": 1,
+      "norm_label": "continue local sessions from any device with remote control"
+    },
+    {
+      "label": "Plan in the cloud with ultraplan",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/ultraplan.md",
+      "source_location": null,
+      "id": "ultraplan",
+      "community": 1,
+      "norm_label": "plan in the cloud with ultraplan"
+    },
+    {
+      "label": "Claude Code GitHub Actions",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/github-actions.md",
+      "source_location": null,
+      "id": "github-actions",
+      "community": 3,
+      "norm_label": "claude code github actions"
+    },
+    {
+      "label": "Claude Code GitLab CI/CD",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/gitlab-ci-cd.md",
+      "source_location": null,
+      "id": "gitlab-ci-cd",
+      "community": 3,
+      "norm_label": "claude code gitlab ci/cd"
+    },
+    {
+      "label": "Claude Code with GitHub Enterprise Server",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/github-enterprise-server.md",
+      "source_location": null,
+      "id": "github-enterprise-server",
+      "community": 2,
+      "norm_label": "claude code with github enterprise server"
+    },
+    {
+      "label": "What's new",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/whats-new.md",
+      "source_location": null,
+      "id": "whats-new",
+      "community": 1,
+      "norm_label": "what's new"
+    },
+    {
+      "label": "Week 13 - March 23-27, 2026",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w13.md",
+      "source_location": null,
+      "id": "whats-new__2026-w13",
+      "community": 1,
+      "norm_label": "week 13 - march 23-27, 2026"
+    },
+    {
+      "label": "Week 14 - March 30 - April 3, 2026",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w14.md",
+      "source_location": null,
+      "id": "whats-new__2026-w14",
+      "community": 1,
+      "norm_label": "week 14 - march 30 - april 3, 2026"
+    },
+    {
+      "label": "Week 15 - April 6-10, 2026",
+      "file_type": "document",
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w15.md",
+      "source_location": null,
+      "id": "whats-new__2026-w15",
+      "community": 1,
+      "norm_label": "week 15 - april 6-10, 2026"
+    }
+  ],
+  "links": [
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__migration-guide.md",
+      "_src": "agent-sdk__migration-guide",
+      "_tgt": "agent-sdk__overview",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__migration-guide"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "_src": "agent-sdk__overview",
+      "_tgt": "agent-sdk__quickstart",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__quickstart"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "_src": "agent-sdk__overview",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__python"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "_src": "agent-sdk__overview",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__typescript"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "_src": "agent-sdk__overview",
+      "_tgt": "agent-sdk__hooks",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__hooks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__subagents.md",
+      "_src": "agent-sdk__subagents",
+      "_tgt": "agent-sdk__overview",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__subagents"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "_src": "agent-sdk__overview",
+      "_tgt": "agent-sdk__mcp",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__mcp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "_src": "agent-sdk__overview",
+      "_tgt": "agent-sdk__permissions",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__permissions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "_src": "agent-sdk__overview",
+      "_tgt": "agent-sdk__sessions",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__sessions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "_src": "agent-sdk__overview",
+      "_tgt": "agent-sdk__user-input",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__user-input"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__skills.md",
+      "_src": "agent-sdk__skills",
+      "_tgt": "agent-sdk__overview",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__skills"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__slash-commands.md",
+      "_src": "agent-sdk__slash-commands",
+      "_tgt": "agent-sdk__overview",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__slash-commands"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "_src": "agent-sdk__overview",
+      "_tgt": "agent-sdk__modifying-system-prompts",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__modifying-system-prompts"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "_src": "agent-sdk__overview",
+      "_tgt": "agent-sdk__plugins",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__plugins"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "_src": "agent-sdk__overview",
+      "_tgt": "amazon-bedrock",
+      "source": "agent-sdk__overview",
+      "target": "amazon-bedrock"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "_src": "agent-sdk__overview",
+      "_tgt": "google-vertex-ai",
+      "source": "agent-sdk__overview",
+      "target": "google-vertex-ai"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__overview.md",
+      "_src": "agent-sdk__overview",
+      "_tgt": "microsoft-foundry",
+      "source": "agent-sdk__overview",
+      "target": "microsoft-foundry"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__typescript-v2-preview.md",
+      "_src": "agent-sdk__typescript-v2-preview",
+      "_tgt": "agent-sdk__overview",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__typescript-v2-preview"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__cost-tracking.md",
+      "_src": "agent-sdk__cost-tracking",
+      "_tgt": "agent-sdk__overview",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__cost-tracking"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__custom-tools.md",
+      "_src": "agent-sdk__custom-tools",
+      "_tgt": "agent-sdk__overview",
+      "source": "agent-sdk__overview",
+      "target": "agent-sdk__custom-tools"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/github-actions.md",
+      "_src": "github-actions",
+      "_tgt": "agent-sdk__overview",
+      "source": "agent-sdk__overview",
+      "target": "github-actions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/gitlab-ci-cd.md",
+      "_src": "gitlab-ci-cd",
+      "_tgt": "agent-sdk__overview",
+      "source": "agent-sdk__overview",
+      "target": "gitlab-ci-cd"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "_src": "agent-sdk__quickstart",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__quickstart",
+      "target": "agent-sdk__python"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "_src": "agent-sdk__quickstart",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__quickstart",
+      "target": "agent-sdk__typescript"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "_src": "agent-sdk__quickstart",
+      "_tgt": "agent-sdk__permissions",
+      "source": "agent-sdk__quickstart",
+      "target": "agent-sdk__permissions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "_src": "agent-sdk__quickstart",
+      "_tgt": "agent-sdk__hooks",
+      "source": "agent-sdk__quickstart",
+      "target": "agent-sdk__hooks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "_src": "agent-sdk__quickstart",
+      "_tgt": "agent-sdk__sessions",
+      "source": "agent-sdk__quickstart",
+      "target": "agent-sdk__sessions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "_src": "agent-sdk__quickstart",
+      "_tgt": "agent-sdk__mcp",
+      "source": "agent-sdk__quickstart",
+      "target": "agent-sdk__mcp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "_src": "agent-sdk__quickstart",
+      "_tgt": "agent-sdk__hosting",
+      "source": "agent-sdk__quickstart",
+      "target": "agent-sdk__hosting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "_src": "agent-sdk__quickstart",
+      "_tgt": "agent-sdk__user-input",
+      "source": "agent-sdk__quickstart",
+      "target": "agent-sdk__user-input"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "_src": "agent-sdk__quickstart",
+      "_tgt": "agent-sdk__streaming-vs-single-mode",
+      "source": "agent-sdk__quickstart",
+      "target": "agent-sdk__streaming-vs-single-mode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "_src": "agent-sdk__quickstart",
+      "_tgt": "amazon-bedrock",
+      "source": "agent-sdk__quickstart",
+      "target": "amazon-bedrock"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "_src": "agent-sdk__quickstart",
+      "_tgt": "google-vertex-ai",
+      "source": "agent-sdk__quickstart",
+      "target": "google-vertex-ai"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__quickstart.md",
+      "_src": "agent-sdk__quickstart",
+      "_tgt": "microsoft-foundry",
+      "source": "agent-sdk__quickstart",
+      "target": "microsoft-foundry"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "_src": "agent-sdk__agent-loop",
+      "_tgt": "agent-sdk__quickstart",
+      "source": "agent-sdk__quickstart",
+      "target": "agent-sdk__agent-loop"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__file-checkpointing.md",
+      "_src": "agent-sdk__file-checkpointing",
+      "_tgt": "agent-sdk__quickstart",
+      "source": "agent-sdk__quickstart",
+      "target": "agent-sdk__file-checkpointing"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__migration-guide.md",
+      "_src": "agent-sdk__migration-guide",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__migration-guide"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "_src": "agent-sdk__agent-loop",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__agent-loop"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__sessions.md",
+      "_src": "agent-sdk__sessions",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__sessions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__user-input.md",
+      "_src": "agent-sdk__user-input",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__user-input"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__cost-tracking.md",
+      "_src": "agent-sdk__cost-tracking",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__cost-tracking"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__python.md",
+      "_src": "agent-sdk__python",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__typescript"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__custom-tools.md",
+      "_src": "agent-sdk__custom-tools",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__custom-tools"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__file-checkpointing.md",
+      "_src": "agent-sdk__file-checkpointing",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__file-checkpointing"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__hooks.md",
+      "_src": "agent-sdk__hooks",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__hooks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__mcp.md",
+      "_src": "agent-sdk__mcp",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__mcp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__skills.md",
+      "_src": "agent-sdk__skills",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__skills"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__subagents.md",
+      "_src": "agent-sdk__subagents",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__subagents"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__todo-tracking.md",
+      "_src": "agent-sdk__todo-tracking",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__todo-tracking"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__tool-search.md",
+      "_src": "agent-sdk__tool-search",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__tool-search"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__claude-code-features",
+      "_tgt": "agent-sdk__python",
+      "source": "agent-sdk__python",
+      "target": "agent-sdk__claude-code-features"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__typescript.md",
+      "_src": "agent-sdk__typescript",
+      "_tgt": "agent-sdk__typescript-v2-preview",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__typescript-v2-preview"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__migration-guide.md",
+      "_src": "agent-sdk__migration-guide",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__migration-guide"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "_src": "agent-sdk__agent-loop",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__agent-loop"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__sessions.md",
+      "_src": "agent-sdk__sessions",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__sessions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__user-input.md",
+      "_src": "agent-sdk__user-input",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__user-input"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__modifying-system-prompts.md",
+      "_src": "agent-sdk__modifying-system-prompts",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__modifying-system-prompts"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__cost-tracking.md",
+      "_src": "agent-sdk__cost-tracking",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__cost-tracking"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__custom-tools.md",
+      "_src": "agent-sdk__custom-tools",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__custom-tools"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__file-checkpointing.md",
+      "_src": "agent-sdk__file-checkpointing",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__file-checkpointing"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__hooks.md",
+      "_src": "agent-sdk__hooks",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__hooks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__hosting.md",
+      "_src": "agent-sdk__hosting",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__hosting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__mcp.md",
+      "_src": "agent-sdk__mcp",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__mcp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__skills.md",
+      "_src": "agent-sdk__skills",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__skills"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__slash-commands.md",
+      "_src": "agent-sdk__slash-commands",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__slash-commands"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__subagents.md",
+      "_src": "agent-sdk__subagents",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__subagents"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__todo-tracking.md",
+      "_src": "agent-sdk__todo-tracking",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__todo-tracking"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__tool-search.md",
+      "_src": "agent-sdk__tool-search",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__tool-search"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__claude-code-features",
+      "_tgt": "agent-sdk__typescript",
+      "source": "agent-sdk__typescript",
+      "target": "agent-sdk__claude-code-features"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__sessions.md",
+      "_src": "agent-sdk__sessions",
+      "_tgt": "agent-sdk__typescript-v2-preview",
+      "source": "agent-sdk__typescript-v2-preview",
+      "target": "agent-sdk__sessions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__migration-guide.md",
+      "_src": "agent-sdk__migration-guide",
+      "_tgt": "agent-sdk__custom-tools",
+      "source": "agent-sdk__migration-guide",
+      "target": "agent-sdk__custom-tools"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__migration-guide.md",
+      "_src": "agent-sdk__migration-guide",
+      "_tgt": "agent-sdk__mcp",
+      "source": "agent-sdk__migration-guide",
+      "target": "agent-sdk__mcp"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__migration-guide.md",
+      "_src": "agent-sdk__migration-guide",
+      "_tgt": "agent-sdk__modifying-system-prompts",
+      "source": "agent-sdk__migration-guide",
+      "target": "agent-sdk__modifying-system-prompts"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "_src": "agent-sdk__agent-loop",
+      "_tgt": "how-claude-code-works",
+      "source": "agent-sdk__agent-loop",
+      "target": "how-claude-code-works"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "_src": "agent-sdk__agent-loop",
+      "_tgt": "agent-sdk__hooks",
+      "source": "agent-sdk__agent-loop",
+      "target": "agent-sdk__hooks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "_src": "agent-sdk__agent-loop",
+      "_tgt": "agent-sdk__streaming-output",
+      "source": "agent-sdk__agent-loop",
+      "target": "agent-sdk__streaming-output"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "_src": "agent-sdk__agent-loop",
+      "_tgt": "agent-sdk__permissions",
+      "source": "agent-sdk__agent-loop",
+      "target": "agent-sdk__permissions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "_src": "agent-sdk__agent-loop",
+      "_tgt": "agent-sdk__mcp",
+      "source": "agent-sdk__agent-loop",
+      "target": "agent-sdk__mcp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "_src": "agent-sdk__agent-loop",
+      "_tgt": "agent-sdk__custom-tools",
+      "source": "agent-sdk__agent-loop",
+      "target": "agent-sdk__custom-tools"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "_src": "agent-sdk__agent-loop",
+      "_tgt": "agent-sdk__subagents",
+      "source": "agent-sdk__agent-loop",
+      "target": "agent-sdk__subagents"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__sessions.md",
+      "_src": "agent-sdk__sessions",
+      "_tgt": "agent-sdk__agent-loop",
+      "source": "agent-sdk__agent-loop",
+      "target": "agent-sdk__sessions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "_src": "agent-sdk__agent-loop",
+      "_tgt": "agent-sdk__claude-code-features",
+      "source": "agent-sdk__agent-loop",
+      "target": "agent-sdk__claude-code-features"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__agent-loop.md",
+      "_src": "agent-sdk__agent-loop",
+      "_tgt": "agent-sdk__slash-commands",
+      "source": "agent-sdk__agent-loop",
+      "target": "agent-sdk__slash-commands"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__cost-tracking.md",
+      "_src": "agent-sdk__cost-tracking",
+      "_tgt": "agent-sdk__agent-loop",
+      "source": "agent-sdk__agent-loop",
+      "target": "agent-sdk__cost-tracking"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__sessions.md",
+      "_src": "agent-sdk__sessions",
+      "_tgt": "agent-sdk__user-input",
+      "source": "agent-sdk__sessions",
+      "target": "agent-sdk__user-input"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agent-sdk__file-checkpointing.md",
+      "_src": "agent-sdk__file-checkpointing",
+      "_tgt": "agent-sdk__sessions",
+      "source": "agent-sdk__sessions",
+      "target": "agent-sdk__file-checkpointing"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__hosting.md",
+      "_src": "agent-sdk__hosting",
+      "_tgt": "agent-sdk__sessions",
+      "source": "agent-sdk__sessions",
+      "target": "agent-sdk__hosting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__observability.md",
+      "_src": "agent-sdk__observability",
+      "_tgt": "agent-sdk__sessions",
+      "source": "agent-sdk__sessions",
+      "target": "agent-sdk__observability"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__streaming-output.md",
+      "_src": "agent-sdk__streaming-output",
+      "_tgt": "agent-sdk__streaming-vs-single-mode",
+      "source": "agent-sdk__streaming-output",
+      "target": "agent-sdk__streaming-vs-single-mode"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__structured-outputs.md",
+      "_src": "agent-sdk__structured-outputs",
+      "_tgt": "agent-sdk__streaming-output",
+      "source": "agent-sdk__streaming-output",
+      "target": "agent-sdk__structured-outputs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__streaming-output.md",
+      "_src": "agent-sdk__streaming-output",
+      "_tgt": "agent-sdk__permissions",
+      "source": "agent-sdk__streaming-output",
+      "target": "agent-sdk__permissions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__user-input.md",
+      "_src": "agent-sdk__user-input",
+      "_tgt": "agent-sdk__streaming-vs-single-mode",
+      "source": "agent-sdk__streaming-vs-single-mode",
+      "target": "agent-sdk__user-input"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__todo-tracking.md",
+      "_src": "agent-sdk__todo-tracking",
+      "_tgt": "agent-sdk__streaming-vs-single-mode",
+      "source": "agent-sdk__streaming-vs-single-mode",
+      "target": "agent-sdk__todo-tracking"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__structured-outputs.md",
+      "_src": "agent-sdk__structured-outputs",
+      "_tgt": "agent-sdk__custom-tools",
+      "source": "agent-sdk__structured-outputs",
+      "target": "agent-sdk__custom-tools"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__permissions.md",
+      "_src": "agent-sdk__permissions",
+      "_tgt": "agent-sdk__user-input",
+      "source": "agent-sdk__user-input",
+      "target": "agent-sdk__permissions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__user-input.md",
+      "_src": "agent-sdk__user-input",
+      "_tgt": "agent-sdk__hooks",
+      "source": "agent-sdk__user-input",
+      "target": "agent-sdk__hooks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__user-input.md",
+      "_src": "agent-sdk__user-input",
+      "_tgt": "agent-sdk__custom-tools",
+      "source": "agent-sdk__user-input",
+      "target": "agent-sdk__custom-tools"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__claude-code-features",
+      "_tgt": "agent-sdk__modifying-system-prompts",
+      "source": "agent-sdk__modifying-system-prompts",
+      "target": "agent-sdk__claude-code-features"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__cost-tracking.md",
+      "_src": "agent-sdk__cost-tracking",
+      "_tgt": "agent-sdk__permissions",
+      "source": "agent-sdk__cost-tracking",
+      "target": "agent-sdk__permissions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__hosting.md",
+      "_src": "agent-sdk__hosting",
+      "_tgt": "agent-sdk__cost-tracking",
+      "source": "agent-sdk__cost-tracking",
+      "target": "agent-sdk__hosting"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "agent-sdk__observability.md",
+      "_src": "agent-sdk__observability",
+      "_tgt": "agent-sdk__cost-tracking",
+      "source": "agent-sdk__cost-tracking",
+      "target": "agent-sdk__observability"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "agent-sdk__hooks.md",
+      "_src": "agent-sdk__hooks",
+      "_tgt": "agent-sdk__permissions",
+      "source": "agent-sdk__hooks",
+      "target": "agent-sdk__permissions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__hooks.md",
+      "_src": "agent-sdk__hooks",
+      "_tgt": "agent-sdk__custom-tools",
+      "source": "agent-sdk__hooks",
+      "target": "agent-sdk__custom-tools"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "agent-sdk__hooks.md",
+      "_src": "agent-sdk__hooks",
+      "_tgt": "hooks",
+      "source": "agent-sdk__hooks",
+      "target": "hooks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__hooks.md",
+      "_src": "agent-sdk__hooks",
+      "_tgt": "hooks-guide",
+      "source": "agent-sdk__hooks",
+      "target": "hooks-guide"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__observability.md",
+      "_src": "agent-sdk__observability",
+      "_tgt": "agent-sdk__hooks",
+      "source": "agent-sdk__hooks",
+      "target": "agent-sdk__observability"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__claude-code-features",
+      "_tgt": "agent-sdk__hooks",
+      "source": "agent-sdk__hooks",
+      "target": "agent-sdk__claude-code-features"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__custom-tools.md",
+      "_src": "agent-sdk__custom-tools",
+      "_tgt": "agent-sdk__permissions",
+      "source": "agent-sdk__permissions",
+      "target": "agent-sdk__custom-tools"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__file-checkpointing.md",
+      "_src": "agent-sdk__file-checkpointing",
+      "_tgt": "agent-sdk__permissions",
+      "source": "agent-sdk__permissions",
+      "target": "agent-sdk__file-checkpointing"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__hosting.md",
+      "_src": "agent-sdk__hosting",
+      "_tgt": "agent-sdk__permissions",
+      "source": "agent-sdk__permissions",
+      "target": "agent-sdk__hosting"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "agent-sdk__mcp.md",
+      "_src": "agent-sdk__mcp",
+      "_tgt": "agent-sdk__permissions",
+      "source": "agent-sdk__permissions",
+      "target": "agent-sdk__mcp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__permissions.md",
+      "_src": "agent-sdk__permissions",
+      "_tgt": "settings",
+      "source": "agent-sdk__permissions",
+      "target": "settings"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__permissions.md",
+      "_src": "agent-sdk__permissions",
+      "_tgt": "permission-modes",
+      "source": "agent-sdk__permissions",
+      "target": "permission-modes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__secure-deployment.md",
+      "_src": "agent-sdk__secure-deployment",
+      "_tgt": "agent-sdk__permissions",
+      "source": "agent-sdk__permissions",
+      "target": "agent-sdk__secure-deployment"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__claude-code-features",
+      "_tgt": "agent-sdk__permissions",
+      "source": "agent-sdk__permissions",
+      "target": "agent-sdk__claude-code-features"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "agent-sdk__permissions.md",
+      "_src": "agent-sdk__permissions",
+      "_tgt": "permissions",
+      "source": "agent-sdk__permissions",
+      "target": "permissions"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "agent-sdk__custom-tools.md",
+      "_src": "agent-sdk__custom-tools",
+      "_tgt": "agent-sdk__mcp",
+      "source": "agent-sdk__mcp",
+      "target": "agent-sdk__custom-tools"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__hosting.md",
+      "_src": "agent-sdk__hosting",
+      "_tgt": "agent-sdk__mcp",
+      "source": "agent-sdk__mcp",
+      "target": "agent-sdk__hosting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__tool-search.md",
+      "_src": "agent-sdk__tool-search",
+      "_tgt": "agent-sdk__mcp",
+      "source": "agent-sdk__mcp",
+      "target": "agent-sdk__tool-search"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__claude-code-features",
+      "_tgt": "agent-sdk__mcp",
+      "source": "agent-sdk__mcp",
+      "target": "agent-sdk__claude-code-features"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__plugins.md",
+      "_src": "agent-sdk__plugins",
+      "_tgt": "agent-sdk__subagents",
+      "source": "agent-sdk__subagents",
+      "target": "agent-sdk__plugins"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__skills.md",
+      "_src": "agent-sdk__skills",
+      "_tgt": "agent-sdk__subagents",
+      "source": "agent-sdk__subagents",
+      "target": "agent-sdk__skills"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__slash-commands.md",
+      "_src": "agent-sdk__slash-commands",
+      "_tgt": "agent-sdk__subagents",
+      "source": "agent-sdk__subagents",
+      "target": "agent-sdk__slash-commands"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "agent-sdk__subagents.md",
+      "_src": "agent-sdk__subagents",
+      "_tgt": "sub-agents",
+      "source": "agent-sdk__subagents",
+      "target": "sub-agents"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__claude-code-features",
+      "_tgt": "agent-sdk__subagents",
+      "source": "agent-sdk__subagents",
+      "target": "agent-sdk__claude-code-features"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__subagents",
+      "_tgt": "agent-teams",
+      "source": "agent-sdk__subagents",
+      "target": "agent-teams"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "agent-sdk__tool-search.md",
+      "_src": "agent-sdk__tool-search",
+      "_tgt": "agent-sdk__custom-tools",
+      "source": "agent-sdk__custom-tools",
+      "target": "agent-sdk__tool-search"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__todo-tracking.md",
+      "_src": "agent-sdk__todo-tracking",
+      "_tgt": "agent-sdk__custom-tools",
+      "source": "agent-sdk__custom-tools",
+      "target": "agent-sdk__todo-tracking"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "agent-sdk__hosting.md",
+      "_src": "agent-sdk__hosting",
+      "_tgt": "agent-sdk__secure-deployment",
+      "source": "agent-sdk__hosting",
+      "target": "agent-sdk__secure-deployment"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__observability.md",
+      "_src": "agent-sdk__observability",
+      "_tgt": "agent-sdk__hosting",
+      "source": "agent-sdk__hosting",
+      "target": "agent-sdk__observability"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agent-sdk__plugins.md",
+      "_src": "agent-sdk__skills",
+      "_tgt": "agent-sdk__plugins",
+      "source": "agent-sdk__skills",
+      "target": "agent-sdk__plugins"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agent-sdk__skills.md",
+      "_src": "agent-sdk__skills",
+      "_tgt": "agent-sdk__slash-commands",
+      "source": "agent-sdk__skills",
+      "target": "agent-sdk__slash-commands"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "agent-sdk__skills.md",
+      "_src": "agent-sdk__skills",
+      "_tgt": "skills",
+      "source": "agent-sdk__skills",
+      "target": "skills"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__claude-code-features",
+      "_tgt": "agent-sdk__skills",
+      "source": "agent-sdk__skills",
+      "target": "agent-sdk__claude-code-features"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__plugins.md",
+      "_src": "agent-sdk__plugins",
+      "_tgt": "agent-sdk__slash-commands",
+      "source": "agent-sdk__slash-commands",
+      "target": "agent-sdk__plugins"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__slash-commands.md",
+      "_src": "agent-sdk__slash-commands",
+      "_tgt": "skills",
+      "source": "agent-sdk__slash-commands",
+      "target": "skills"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__slash-commands.md",
+      "_src": "agent-sdk__slash-commands",
+      "_tgt": "cli-reference",
+      "source": "agent-sdk__slash-commands",
+      "target": "cli-reference"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__plugins.md",
+      "_src": "agent-sdk__plugins",
+      "_tgt": "plugins",
+      "source": "agent-sdk__plugins",
+      "target": "plugins"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__plugins.md",
+      "_src": "agent-sdk__plugins",
+      "_tgt": "plugins-reference",
+      "source": "agent-sdk__plugins",
+      "target": "plugins-reference"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__claude-code-features",
+      "_tgt": "memory",
+      "source": "agent-sdk__claude-code-features",
+      "target": "memory"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__claude-code-features",
+      "_tgt": "features-overview",
+      "source": "agent-sdk__claude-code-features",
+      "target": "features-overview"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__claude-code-features",
+      "_tgt": "hooks",
+      "source": "agent-sdk__claude-code-features",
+      "target": "hooks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__claude-code-features",
+      "_tgt": "hooks-guide",
+      "source": "agent-sdk__claude-code-features",
+      "target": "hooks-guide"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__claude-code-features.md",
+      "_src": "agent-sdk__claude-code-features",
+      "_tgt": "agent-teams",
+      "source": "agent-sdk__claude-code-features",
+      "target": "agent-teams"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "vs-code.md",
+      "_src": "vs-code",
+      "_tgt": "amazon-bedrock",
+      "source": "amazon-bedrock",
+      "target": "vs-code"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "third-party-integrations.md",
+      "_src": "third-party-integrations",
+      "_tgt": "amazon-bedrock",
+      "source": "amazon-bedrock",
+      "target": "third-party-integrations"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "amazon-bedrock.md",
+      "_src": "amazon-bedrock",
+      "_tgt": "llm-gateway",
+      "source": "amazon-bedrock",
+      "target": "llm-gateway"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "amazon-bedrock.md",
+      "_src": "amazon-bedrock",
+      "_tgt": "google-vertex-ai",
+      "source": "amazon-bedrock",
+      "target": "google-vertex-ai"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "amazon-bedrock.md",
+      "_src": "amazon-bedrock",
+      "_tgt": "microsoft-foundry",
+      "source": "amazon-bedrock",
+      "target": "microsoft-foundry"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w15.md",
+      "_src": "whats-new__2026-w15",
+      "_tgt": "amazon-bedrock",
+      "source": "amazon-bedrock",
+      "target": "whats-new__2026-w15"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "vs-code.md",
+      "_src": "vs-code",
+      "_tgt": "google-vertex-ai",
+      "source": "google-vertex-ai",
+      "target": "vs-code"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "third-party-integrations.md",
+      "_src": "third-party-integrations",
+      "_tgt": "google-vertex-ai",
+      "source": "google-vertex-ai",
+      "target": "third-party-integrations"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "llm-gateway.md",
+      "_src": "llm-gateway",
+      "_tgt": "google-vertex-ai",
+      "source": "google-vertex-ai",
+      "target": "llm-gateway"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "google-vertex-ai.md",
+      "_src": "google-vertex-ai",
+      "_tgt": "microsoft-foundry",
+      "source": "google-vertex-ai",
+      "target": "microsoft-foundry"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "google-vertex-ai",
+      "source": "google-vertex-ai",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w15.md",
+      "_src": "whats-new__2026-w15",
+      "_tgt": "google-vertex-ai",
+      "source": "google-vertex-ai",
+      "target": "whats-new__2026-w15"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "vs-code.md",
+      "_src": "vs-code",
+      "_tgt": "microsoft-foundry",
+      "source": "microsoft-foundry",
+      "target": "vs-code"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "third-party-integrations.md",
+      "_src": "third-party-integrations",
+      "_tgt": "microsoft-foundry",
+      "source": "microsoft-foundry",
+      "target": "third-party-integrations"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quickstart.md",
+      "_src": "quickstart",
+      "_tgt": "how-claude-code-works",
+      "source": "how-claude-code-works",
+      "target": "quickstart"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "best-practices.md",
+      "_src": "best-practices",
+      "_tgt": "how-claude-code-works",
+      "source": "how-claude-code-works",
+      "target": "best-practices"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "common-workflows.md",
+      "_src": "common-workflows",
+      "_tgt": "how-claude-code-works",
+      "source": "how-claude-code-works",
+      "target": "common-workflows"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "features-overview.md",
+      "_src": "features-overview",
+      "_tgt": "how-claude-code-works",
+      "source": "how-claude-code-works",
+      "target": "features-overview"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "headless.md",
+      "_src": "headless",
+      "_tgt": "how-claude-code-works",
+      "source": "how-claude-code-works",
+      "target": "headless"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__python.md",
+      "_src": "overview_query_function",
+      "_tgt": "overview_claude_sdk_client",
+      "source": "overview_query_function",
+      "target": "overview_claude_sdk_client"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "graphify-out/.preprocessed/agent-sdk__typescript-v2-preview.md",
+      "_src": "overview_v2_session",
+      "_tgt": "overview_claude_sdk_client",
+      "source": "overview_claude_sdk_client",
+      "target": "overview_v2_session"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__observability.md",
+      "_src": "agent-sdk__observability",
+      "_tgt": "monitoring-usage",
+      "source": "agent-sdk__observability",
+      "target": "monitoring-usage"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "agent-sdk__secure-deployment.md",
+      "_src": "agent-sdk__secure-deployment",
+      "_tgt": "security",
+      "source": "agent-sdk__secure-deployment",
+      "target": "security"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__secure-deployment.md",
+      "_src": "agent-sdk__secure-deployment",
+      "_tgt": "permissions",
+      "source": "agent-sdk__secure-deployment",
+      "target": "permissions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-sdk__secure-deployment.md",
+      "_src": "agent-sdk__secure-deployment",
+      "_tgt": "sandboxing",
+      "source": "agent-sdk__secure-deployment",
+      "target": "sandboxing"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hooks-guide.md",
+      "_src": "hooks-guide",
+      "_tgt": "hooks",
+      "source": "hooks",
+      "target": "hooks-guide"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "hooks.md",
+      "_src": "hooks",
+      "_tgt": "permission-modes",
+      "source": "hooks",
+      "target": "permission-modes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "security.md",
+      "_src": "security",
+      "_tgt": "hooks",
+      "source": "hooks",
+      "target": "security"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "hooks",
+      "source": "hooks",
+      "target": "costs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w13.md",
+      "_src": "whats-new__2026-w13",
+      "_tgt": "hooks",
+      "source": "hooks",
+      "target": "whats-new__2026-w13"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "permissions.md",
+      "_src": "permissions",
+      "_tgt": "hooks-guide",
+      "source": "hooks-guide",
+      "target": "permissions"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "hooks-guide.md",
+      "_src": "hooks-guide",
+      "_tgt": "security",
+      "source": "hooks-guide",
+      "target": "security"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "hooks-guide.md",
+      "_src": "hooks-guide",
+      "_tgt": "sandboxing",
+      "source": "hooks-guide",
+      "target": "sandboxing"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "hooks-guide",
+      "source": "hooks-guide",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server-managed-settings.md",
+      "_src": "server-managed-settings",
+      "_tgt": "settings",
+      "source": "settings",
+      "target": "server-managed-settings"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "env-vars.md",
+      "_src": "env-vars",
+      "_tgt": "settings",
+      "source": "settings",
+      "target": "env-vars"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "model-config.md",
+      "_src": "model-config",
+      "_tgt": "settings",
+      "source": "settings",
+      "target": "model-config"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "statusline.md",
+      "_src": "statusline",
+      "_tgt": "settings",
+      "source": "settings",
+      "target": "statusline"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "fast-mode.md",
+      "_src": "fast-mode",
+      "_tgt": "settings",
+      "source": "settings",
+      "target": "fast-mode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "output-styles.md",
+      "_src": "output-styles",
+      "_tgt": "settings",
+      "source": "settings",
+      "target": "output-styles"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "network-config.md",
+      "_src": "network-config",
+      "_tgt": "settings",
+      "source": "settings",
+      "target": "network-config"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "settings.md",
+      "_src": "settings",
+      "_tgt": "claude-directory",
+      "source": "settings",
+      "target": "claude-directory"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "settings",
+      "source": "settings",
+      "target": "costs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/monitoring-usage.md",
+      "_src": "monitoring-usage",
+      "_tgt": "settings",
+      "source": "settings",
+      "target": "monitoring-usage"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "settings",
+      "source": "settings",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/github-enterprise-server.md",
+      "_src": "github-enterprise-server",
+      "_tgt": "settings",
+      "source": "settings",
+      "target": "github-enterprise-server"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/analytics.md",
+      "_src": "analytics",
+      "_tgt": "monitoring-usage",
+      "source": "monitoring-usage",
+      "target": "analytics"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "monitoring-usage",
+      "source": "monitoring-usage",
+      "target": "costs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "security.md",
+      "_src": "security",
+      "_tgt": "permissions",
+      "source": "security",
+      "target": "permissions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "permission-modes.md",
+      "_src": "permission-modes",
+      "_tgt": "security",
+      "source": "security",
+      "target": "permission-modes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "security.md",
+      "_src": "security",
+      "_tgt": "sandboxing",
+      "source": "security",
+      "target": "sandboxing"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "authentication.md",
+      "_src": "authentication",
+      "_tgt": "security",
+      "source": "security",
+      "target": "authentication"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "data-usage.md",
+      "_src": "data-usage",
+      "_tgt": "security",
+      "source": "security",
+      "target": "data-usage"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "legal-and-compliance.md",
+      "_src": "legal-and-compliance",
+      "_tgt": "security",
+      "source": "security",
+      "target": "legal-and-compliance"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "zero-data-retention.md",
+      "_src": "zero-data-retention",
+      "_tgt": "security",
+      "source": "security",
+      "target": "zero-data-retention"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "security",
+      "source": "security",
+      "target": "remote-control"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "permission-modes.md",
+      "_src": "permission-modes",
+      "_tgt": "permissions",
+      "source": "permissions",
+      "target": "permission-modes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "sandboxing.md",
+      "_src": "sandboxing",
+      "_tgt": "permissions",
+      "source": "permissions",
+      "target": "sandboxing"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "permissions.md",
+      "_src": "permissions",
+      "_tgt": "authentication",
+      "source": "permissions",
+      "target": "authentication"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/analytics.md",
+      "_src": "analytics",
+      "_tgt": "permissions",
+      "source": "permissions",
+      "target": "analytics"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "permissions",
+      "source": "permissions",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "permission-modes.md",
+      "_src": "permission-modes",
+      "_tgt": "sandboxing",
+      "source": "sandboxing",
+      "target": "permission-modes"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "sandboxing.md",
+      "_src": "sandboxing",
+      "_tgt": "data-usage",
+      "source": "sandboxing",
+      "target": "data-usage"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "sandboxing",
+      "source": "sandboxing",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "sandboxing",
+      "source": "sandboxing",
+      "target": "remote-control"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "plugins.md",
+      "_src": "plugins",
+      "_tgt": "mcp",
+      "source": "plugins",
+      "target": "mcp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "discover-plugins.md",
+      "_src": "discover-plugins",
+      "_tgt": "plugins",
+      "source": "plugins",
+      "target": "discover-plugins"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "plugins-reference.md",
+      "_src": "plugins-reference",
+      "_tgt": "plugins",
+      "source": "plugins",
+      "target": "plugins-reference"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "plugin-marketplaces.md",
+      "_src": "plugin-marketplaces",
+      "_tgt": "plugins",
+      "source": "plugins",
+      "target": "plugin-marketplaces"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills.md",
+      "_src": "skills",
+      "_tgt": "plugins",
+      "source": "plugins",
+      "target": "skills"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "sub-agents.md",
+      "_src": "sub-agents",
+      "_tgt": "plugins",
+      "source": "plugins",
+      "target": "sub-agents"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "plugins.md",
+      "_src": "plugins",
+      "_tgt": "channels",
+      "source": "plugins",
+      "target": "channels"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "channels-reference.md",
+      "_src": "channels-reference",
+      "_tgt": "plugins",
+      "source": "plugins",
+      "target": "channels-reference"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "commands.md",
+      "_src": "commands",
+      "_tgt": "plugins",
+      "source": "plugins",
+      "target": "commands"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "plugins-reference.md",
+      "_src": "plugins-reference",
+      "_tgt": "mcp",
+      "source": "plugins-reference",
+      "target": "mcp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "discover-plugins.md",
+      "_src": "discover-plugins",
+      "_tgt": "plugins-reference",
+      "source": "plugins-reference",
+      "target": "discover-plugins"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "plugin-marketplaces.md",
+      "_src": "plugin-marketplaces",
+      "_tgt": "plugins-reference",
+      "source": "plugins-reference",
+      "target": "plugin-marketplaces"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "plugins-reference.md",
+      "_src": "plugins-reference",
+      "_tgt": "skills",
+      "source": "plugins-reference",
+      "target": "skills"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "plugins-reference.md",
+      "_src": "plugins-reference",
+      "_tgt": "sub-agents",
+      "source": "plugins-reference",
+      "target": "sub-agents"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "plugins-reference.md",
+      "_src": "plugins-reference",
+      "_tgt": "tools-reference",
+      "source": "plugins-reference",
+      "target": "tools-reference"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "plugins-reference.md",
+      "_src": "plugins-reference",
+      "_tgt": "agent-teams",
+      "source": "plugins-reference",
+      "target": "agent-teams"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "plugins-reference.md",
+      "_src": "plugins-reference",
+      "_tgt": "channels",
+      "source": "plugins-reference",
+      "target": "channels"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w14.md",
+      "_src": "whats-new__2026-w14",
+      "_tgt": "plugins-reference",
+      "source": "plugins-reference",
+      "target": "whats-new__2026-w14"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "mcp.md",
+      "_src": "mcp",
+      "_tgt": "skills",
+      "source": "skills",
+      "target": "mcp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "commands.md",
+      "_src": "commands",
+      "_tgt": "skills",
+      "source": "skills",
+      "target": "commands"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "sub-agents.md",
+      "_src": "sub-agents",
+      "_tgt": "skills",
+      "source": "skills",
+      "target": "sub-agents"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "memory.md",
+      "_src": "memory",
+      "_tgt": "skills",
+      "source": "skills",
+      "target": "memory"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "agent-teams.md",
+      "_src": "agent-teams",
+      "_tgt": "skills",
+      "source": "skills",
+      "target": "agent-teams"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tools-reference.md",
+      "_src": "tools-reference",
+      "_tgt": "skills",
+      "source": "skills",
+      "target": "tools-reference"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routines.md",
+      "_src": "routines",
+      "_tgt": "skills",
+      "source": "skills",
+      "target": "routines"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "skills",
+      "source": "skills",
+      "target": "costs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/github-actions.md",
+      "_src": "github-actions",
+      "_tgt": "skills",
+      "source": "skills",
+      "target": "github-actions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agent-teams.md",
+      "_src": "agent-teams",
+      "_tgt": "sub-agents",
+      "source": "sub-agents",
+      "target": "agent-teams"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "sub-agents.md",
+      "_src": "sub-agents",
+      "_tgt": "mcp",
+      "source": "sub-agents",
+      "target": "mcp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tools-reference.md",
+      "_src": "tools-reference",
+      "_tgt": "sub-agents",
+      "source": "sub-agents",
+      "target": "tools-reference"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "sub-agents.md",
+      "_src": "sub-agents",
+      "_tgt": "commands",
+      "source": "sub-agents",
+      "target": "commands"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "memory.md",
+      "_src": "memory",
+      "_tgt": "sub-agents",
+      "source": "sub-agents",
+      "target": "memory"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "channels.md",
+      "_src": "channels",
+      "_tgt": "sub-agents",
+      "source": "sub-agents",
+      "target": "channels"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "sub-agents",
+      "source": "sub-agents",
+      "target": "costs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "sub-agents",
+      "source": "sub-agents",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "memory.md",
+      "_src": "memory",
+      "_tgt": "commands",
+      "source": "memory",
+      "target": "commands"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "memory",
+      "source": "memory",
+      "target": "costs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "memory",
+      "source": "memory",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/github-actions.md",
+      "_src": "github-actions",
+      "_tgt": "memory",
+      "source": "memory",
+      "target": "github-actions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/gitlab-ci-cd.md",
+      "_src": "gitlab-ci-cd",
+      "_tgt": "memory",
+      "source": "memory",
+      "target": "gitlab-ci-cd"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "common-workflows.md",
+      "_src": "common-workflows",
+      "_tgt": "features-overview",
+      "source": "features-overview",
+      "target": "common-workflows"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "best-practices.md",
+      "_src": "best-practices",
+      "_tgt": "features-overview",
+      "source": "features-overview",
+      "target": "best-practices"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "code-review.md",
+      "_src": "code-review",
+      "_tgt": "features-overview",
+      "source": "features-overview",
+      "target": "code-review"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "overview.md",
+      "_src": "overview",
+      "_tgt": "features-overview",
+      "source": "features-overview",
+      "target": "overview"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "quickstart.md",
+      "_src": "quickstart",
+      "_tgt": "features-overview",
+      "source": "features-overview",
+      "target": "quickstart"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "agent-teams.md",
+      "_src": "agent-teams",
+      "_tgt": "tools-reference",
+      "source": "agent-teams",
+      "target": "tools-reference"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "routines.md",
+      "_src": "routines",
+      "_tgt": "agent-teams",
+      "source": "agent-teams",
+      "target": "routines"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "agent-teams",
+      "source": "agent-teams",
+      "target": "costs"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "permission-modes.md",
+      "_src": "permission-modes",
+      "_tgt": "data-usage",
+      "source": "permission-modes",
+      "target": "data-usage"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "permission-modes",
+      "source": "permission-modes",
+      "target": "remote-control"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/ultraplan.md",
+      "_src": "ultraplan",
+      "_tgt": "permission-modes",
+      "source": "permission-modes",
+      "target": "ultraplan"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w13.md",
+      "_src": "whats-new__2026-w13",
+      "_tgt": "permission-modes",
+      "source": "permission-modes",
+      "target": "whats-new__2026-w13"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "overview.md",
+      "_src": "overview",
+      "_tgt": "cli-reference",
+      "source": "cli-reference",
+      "target": "overview"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "cli-reference.md",
+      "_src": "cli-reference",
+      "_tgt": "quickstart",
+      "source": "cli-reference",
+      "target": "quickstart"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "cli-reference.md",
+      "_src": "cli-reference",
+      "_tgt": "interactive-mode",
+      "source": "cli-reference",
+      "target": "interactive-mode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "cli-reference.md",
+      "_src": "cli-reference",
+      "_tgt": "common-workflows",
+      "source": "cli-reference",
+      "target": "common-workflows"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "headless.md",
+      "_src": "headless",
+      "_tgt": "cli-reference",
+      "source": "cli-reference",
+      "target": "headless"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "cli-reference",
+      "source": "cli-reference",
+      "target": "remote-control"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "legal-and-compliance.md",
+      "_src": "legal-and-compliance",
+      "_tgt": "authentication",
+      "source": "authentication",
+      "target": "legal-and-compliance"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "authentication.md",
+      "_src": "authentication",
+      "_tgt": "data-usage",
+      "source": "authentication",
+      "target": "data-usage"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "authentication",
+      "source": "authentication",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "authentication",
+      "source": "authentication",
+      "target": "remote-control"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "zero-data-retention.md",
+      "_src": "zero-data-retention",
+      "_tgt": "data-usage",
+      "source": "data-usage",
+      "target": "zero-data-retention"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "legal-and-compliance.md",
+      "_src": "legal-and-compliance",
+      "_tgt": "data-usage",
+      "source": "data-usage",
+      "target": "legal-and-compliance"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "data-usage",
+      "source": "data-usage",
+      "target": "remote-control"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "zero-data-retention.md",
+      "_src": "zero-data-retention",
+      "_tgt": "legal-and-compliance",
+      "source": "zero-data-retention",
+      "target": "legal-and-compliance"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/analytics.md",
+      "_src": "analytics",
+      "_tgt": "zero-data-retention",
+      "source": "zero-data-retention",
+      "target": "analytics"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "channels.md",
+      "_src": "channels",
+      "_tgt": "mcp",
+      "source": "mcp",
+      "target": "channels"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "channels-reference.md",
+      "_src": "channels-reference",
+      "_tgt": "mcp",
+      "source": "mcp",
+      "target": "channels-reference"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "discover-plugins.md",
+      "_src": "discover-plugins",
+      "_tgt": "mcp",
+      "source": "mcp",
+      "target": "discover-plugins"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "mcp.md",
+      "_src": "mcp",
+      "_tgt": "tools-reference",
+      "source": "mcp",
+      "target": "tools-reference"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "commands.md",
+      "_src": "commands",
+      "_tgt": "mcp",
+      "source": "mcp",
+      "target": "commands"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routines.md",
+      "_src": "routines",
+      "_tgt": "mcp",
+      "source": "mcp",
+      "target": "routines"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "mcp",
+      "source": "mcp",
+      "target": "costs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "mcp",
+      "source": "mcp",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "mcp",
+      "source": "mcp",
+      "target": "remote-control"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w14.md",
+      "_src": "whats-new__2026-w14",
+      "_tgt": "mcp",
+      "source": "mcp",
+      "target": "whats-new__2026-w14"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "discover-plugins.md",
+      "_src": "discover-plugins",
+      "_tgt": "plugin-marketplaces",
+      "source": "plugin-marketplaces",
+      "target": "discover-plugins"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "channels-reference.md",
+      "_src": "channels-reference",
+      "_tgt": "plugin-marketplaces",
+      "source": "plugin-marketplaces",
+      "target": "channels-reference"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/github-enterprise-server.md",
+      "_src": "github-enterprise-server",
+      "_tgt": "plugin-marketplaces",
+      "source": "plugin-marketplaces",
+      "target": "github-enterprise-server"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tools-reference.md",
+      "_src": "tools-reference",
+      "_tgt": "discover-plugins",
+      "source": "discover-plugins",
+      "target": "tools-reference"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "discover-plugins",
+      "source": "discover-plugins",
+      "target": "costs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "channels-reference.md",
+      "_src": "channels-reference",
+      "_tgt": "channels",
+      "source": "channels",
+      "target": "channels-reference"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "routines.md",
+      "_src": "routines",
+      "_tgt": "channels",
+      "source": "channels",
+      "target": "routines"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/scheduled-tasks.md",
+      "_src": "scheduled-tasks",
+      "_tgt": "channels",
+      "source": "channels",
+      "target": "scheduled-tasks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "channels",
+      "source": "channels",
+      "target": "remote-control"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "channels-reference",
+      "source": "channels-reference",
+      "target": "remote-control"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/scheduled-tasks.md",
+      "_src": "scheduled-tasks",
+      "_tgt": "tools-reference",
+      "source": "tools-reference",
+      "target": "scheduled-tasks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w13.md",
+      "_src": "whats-new__2026-w13",
+      "_tgt": "tools-reference",
+      "source": "tools-reference",
+      "target": "whats-new__2026-w13"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w15.md",
+      "_src": "whats-new__2026-w15",
+      "_tgt": "tools-reference",
+      "source": "tools-reference",
+      "target": "whats-new__2026-w15"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "commands.md",
+      "_src": "commands",
+      "_tgt": "routines",
+      "source": "commands",
+      "target": "routines"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/scheduled-tasks.md",
+      "_src": "scheduled-tasks",
+      "_tgt": "commands",
+      "source": "commands",
+      "target": "scheduled-tasks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w14.md",
+      "_src": "whats-new__2026-w14",
+      "_tgt": "commands",
+      "source": "commands",
+      "target": "whats-new__2026-w14"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w15.md",
+      "_src": "whats-new__2026-w15",
+      "_tgt": "commands",
+      "source": "commands",
+      "target": "whats-new__2026-w15"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/scheduled-tasks.md",
+      "_src": "scheduled-tasks",
+      "_tgt": "routines",
+      "source": "routines",
+      "target": "scheduled-tasks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "routines",
+      "source": "routines",
+      "target": "remote-control"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "env-vars.md",
+      "_src": "env-vars",
+      "_tgt": "server-managed-settings",
+      "source": "server-managed-settings",
+      "target": "env-vars"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "fast-mode.md",
+      "_src": "fast-mode",
+      "_tgt": "server-managed-settings",
+      "source": "server-managed-settings",
+      "target": "fast-mode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "claude-directory.md",
+      "_src": "claude-directory",
+      "_tgt": "server-managed-settings",
+      "source": "server-managed-settings",
+      "target": "claude-directory"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "model-config.md",
+      "_src": "model-config",
+      "_tgt": "env-vars",
+      "source": "env-vars",
+      "target": "model-config"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "network-config.md",
+      "_src": "network-config",
+      "_tgt": "env-vars",
+      "source": "env-vars",
+      "target": "network-config"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "env-vars.md",
+      "_src": "env-vars",
+      "_tgt": "statusline",
+      "source": "env-vars",
+      "target": "statusline"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "fast-mode.md",
+      "_src": "fast-mode",
+      "_tgt": "env-vars",
+      "source": "env-vars",
+      "target": "fast-mode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "env-vars.md",
+      "_src": "env-vars",
+      "_tgt": "checkpointing",
+      "source": "env-vars",
+      "target": "checkpointing"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "claude-directory.md",
+      "_src": "claude-directory",
+      "_tgt": "env-vars",
+      "source": "env-vars",
+      "target": "claude-directory"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "env-vars",
+      "source": "env-vars",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/scheduled-tasks.md",
+      "_src": "scheduled-tasks",
+      "_tgt": "env-vars",
+      "source": "env-vars",
+      "target": "scheduled-tasks"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "statusline.md",
+      "_src": "statusline",
+      "_tgt": "model-config",
+      "source": "model-config",
+      "target": "statusline"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "model-config.md",
+      "_src": "model-config",
+      "_tgt": "fast-mode",
+      "source": "model-config",
+      "target": "fast-mode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "model-config",
+      "source": "model-config",
+      "target": "costs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "model-config",
+      "source": "model-config",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "network-config",
+      "source": "network-config",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/github-enterprise-server.md",
+      "_src": "github-enterprise-server",
+      "_tgt": "network-config",
+      "source": "network-config",
+      "target": "github-enterprise-server"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "terminal-config.md",
+      "_src": "terminal-config",
+      "_tgt": "statusline",
+      "source": "terminal-config",
+      "target": "statusline"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "keybindings.md",
+      "_src": "keybindings",
+      "_tgt": "terminal-config",
+      "source": "terminal-config",
+      "target": "keybindings"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "claude-directory.md",
+      "_src": "claude-directory",
+      "_tgt": "keybindings",
+      "source": "keybindings",
+      "target": "claude-directory"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "output-styles.md",
+      "_src": "output-styles",
+      "_tgt": "context-window",
+      "source": "output-styles",
+      "target": "context-window"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "claude-directory.md",
+      "_src": "claude-directory",
+      "_tgt": "output-styles",
+      "source": "output-styles",
+      "target": "claude-directory"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "statusline.md",
+      "_src": "statusline",
+      "_tgt": "context-window",
+      "source": "statusline",
+      "target": "context-window"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "fast-mode.md",
+      "_src": "fast-mode",
+      "_tgt": "statusline",
+      "source": "statusline",
+      "target": "fast-mode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "statusline",
+      "source": "statusline",
+      "target": "costs"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "checkpointing.md",
+      "_src": "checkpointing",
+      "_tgt": "context-window",
+      "source": "context-window",
+      "target": "checkpointing"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "claude-directory.md",
+      "_src": "claude-directory",
+      "_tgt": "checkpointing",
+      "source": "checkpointing",
+      "target": "claude-directory"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chrome.md",
+      "_src": "chrome",
+      "_tgt": "vs-code",
+      "source": "vs-code",
+      "target": "chrome"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "vs-code.md",
+      "_src": "vs-code",
+      "_tgt": "claude-code-on-the-web",
+      "source": "vs-code",
+      "target": "claude-code-on-the-web"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "jetbrains.md",
+      "_src": "jetbrains",
+      "_tgt": "vs-code",
+      "source": "vs-code",
+      "target": "jetbrains"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "platforms.md",
+      "_src": "platforms",
+      "_tgt": "vs-code",
+      "source": "vs-code",
+      "target": "platforms"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "desktop.md",
+      "_src": "desktop",
+      "_tgt": "vs-code",
+      "source": "vs-code",
+      "target": "desktop"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "vs-code",
+      "source": "vs-code",
+      "target": "remote-control"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "platforms.md",
+      "_src": "platforms",
+      "_tgt": "jetbrains",
+      "source": "jetbrains",
+      "target": "platforms"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "jetbrains",
+      "source": "jetbrains",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "desktop-quickstart.md",
+      "_src": "desktop-quickstart",
+      "_tgt": "desktop",
+      "source": "desktop",
+      "target": "desktop-quickstart"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "desktop-scheduled-tasks.md",
+      "_src": "desktop-scheduled-tasks",
+      "_tgt": "desktop",
+      "source": "desktop",
+      "target": "desktop-scheduled-tasks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "desktop.md",
+      "_src": "desktop",
+      "_tgt": "chrome",
+      "source": "desktop",
+      "target": "chrome"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "claude-code-on-the-web.md",
+      "_src": "claude-code-on-the-web",
+      "_tgt": "desktop",
+      "source": "desktop",
+      "target": "claude-code-on-the-web"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "desktop.md",
+      "_src": "desktop",
+      "_tgt": "third-party-integrations",
+      "source": "desktop",
+      "target": "third-party-integrations"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web-quickstart.md",
+      "_src": "web-quickstart",
+      "_tgt": "desktop",
+      "source": "desktop",
+      "target": "web-quickstart"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "platforms.md",
+      "_src": "platforms",
+      "_tgt": "desktop",
+      "source": "desktop",
+      "target": "platforms"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "desktop",
+      "source": "desktop",
+      "target": "remote-control"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w13.md",
+      "_src": "whats-new__2026-w13",
+      "_tgt": "desktop",
+      "source": "desktop",
+      "target": "whats-new__2026-w13"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "desktop-quickstart.md",
+      "_src": "desktop-quickstart",
+      "_tgt": "claude-code-on-the-web",
+      "source": "desktop-quickstart",
+      "target": "claude-code-on-the-web"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "desktop-quickstart.md",
+      "_src": "desktop-quickstart",
+      "_tgt": "desktop-scheduled-tasks",
+      "source": "desktop-quickstart",
+      "target": "desktop-scheduled-tasks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "platforms.md",
+      "_src": "platforms",
+      "_tgt": "desktop-quickstart",
+      "source": "desktop-quickstart",
+      "target": "platforms"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "web-quickstart.md",
+      "_src": "web-quickstart",
+      "_tgt": "desktop-quickstart",
+      "source": "desktop-quickstart",
+      "target": "web-quickstart"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "desktop-quickstart",
+      "source": "desktop-quickstart",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "platforms.md",
+      "_src": "platforms",
+      "_tgt": "desktop-scheduled-tasks",
+      "source": "desktop-scheduled-tasks",
+      "target": "platforms"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "desktop-scheduled-tasks.md",
+      "_src": "desktop-scheduled-tasks",
+      "_tgt": "claude-code-on-the-web",
+      "source": "desktop-scheduled-tasks",
+      "target": "claude-code-on-the-web"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/scheduled-tasks.md",
+      "_src": "scheduled-tasks",
+      "_tgt": "desktop-scheduled-tasks",
+      "source": "desktop-scheduled-tasks",
+      "target": "scheduled-tasks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "platforms.md",
+      "_src": "platforms",
+      "_tgt": "chrome",
+      "source": "chrome",
+      "target": "platforms"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "slack.md",
+      "_src": "slack",
+      "_tgt": "chrome",
+      "source": "chrome",
+      "target": "slack"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web-quickstart.md",
+      "_src": "web-quickstart",
+      "_tgt": "claude-code-on-the-web",
+      "source": "claude-code-on-the-web",
+      "target": "web-quickstart"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "platforms.md",
+      "_src": "platforms",
+      "_tgt": "claude-code-on-the-web",
+      "source": "claude-code-on-the-web",
+      "target": "platforms"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "slack.md",
+      "_src": "slack",
+      "_tgt": "claude-code-on-the-web",
+      "source": "claude-code-on-the-web",
+      "target": "slack"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "claude-code-on-the-web",
+      "source": "claude-code-on-the-web",
+      "target": "remote-control"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/ultraplan.md",
+      "_src": "ultraplan",
+      "_tgt": "claude-code-on-the-web",
+      "source": "claude-code-on-the-web",
+      "target": "ultraplan"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/github-enterprise-server.md",
+      "_src": "github-enterprise-server",
+      "_tgt": "claude-code-on-the-web",
+      "source": "claude-code-on-the-web",
+      "target": "github-enterprise-server"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w13.md",
+      "_src": "whats-new__2026-w13",
+      "_tgt": "claude-code-on-the-web",
+      "source": "claude-code-on-the-web",
+      "target": "whats-new__2026-w13"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w15.md",
+      "_src": "whats-new__2026-w15",
+      "_tgt": "claude-code-on-the-web",
+      "source": "claude-code-on-the-web",
+      "target": "whats-new__2026-w15"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "platforms.md",
+      "_src": "platforms",
+      "_tgt": "slack",
+      "source": "platforms",
+      "target": "slack"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "llm-gateway.md",
+      "_src": "llm-gateway",
+      "_tgt": "third-party-integrations",
+      "source": "third-party-integrations",
+      "target": "llm-gateway"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "slack",
+      "source": "slack",
+      "target": "remote-control"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "llm-gateway",
+      "source": "llm-gateway",
+      "target": "costs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quickstart.md",
+      "_src": "quickstart",
+      "_tgt": "overview",
+      "source": "overview",
+      "target": "quickstart"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "overview.md",
+      "_src": "overview",
+      "_tgt": "setup",
+      "source": "overview",
+      "target": "setup"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "overview.md",
+      "_src": "overview",
+      "_tgt": "common-workflows",
+      "source": "overview",
+      "target": "common-workflows"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "overview.md",
+      "_src": "overview",
+      "_tgt": "best-practices",
+      "source": "overview",
+      "target": "best-practices"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "overview.md",
+      "_src": "overview",
+      "_tgt": "code-review",
+      "source": "overview",
+      "target": "code-review"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quickstart.md",
+      "_src": "quickstart",
+      "_tgt": "best-practices",
+      "source": "quickstart",
+      "target": "best-practices"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quickstart.md",
+      "_src": "quickstart",
+      "_tgt": "common-workflows",
+      "source": "quickstart",
+      "target": "common-workflows"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quickstart.md",
+      "_src": "quickstart",
+      "_tgt": "setup",
+      "source": "quickstart",
+      "target": "setup"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "devcontainer.md",
+      "_src": "devcontainer",
+      "_tgt": "setup",
+      "source": "setup",
+      "target": "devcontainer"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "setup",
+      "source": "setup",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "best-practices.md",
+      "_src": "best-practices",
+      "_tgt": "common-workflows",
+      "source": "common-workflows",
+      "target": "best-practices"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "common-workflows.md",
+      "_src": "common-workflows",
+      "_tgt": "headless",
+      "source": "common-workflows",
+      "target": "headless"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "common-workflows",
+      "source": "common-workflows",
+      "target": "costs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "common-workflows",
+      "source": "common-workflows",
+      "target": "remote-control"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "best-practices.md",
+      "_src": "best-practices",
+      "_tgt": "interactive-mode",
+      "source": "best-practices",
+      "target": "interactive-mode"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "headless.md",
+      "_src": "headless",
+      "_tgt": "best-practices",
+      "source": "best-practices",
+      "target": "headless"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "voice-dictation.md",
+      "_src": "voice-dictation",
+      "_tgt": "interactive-mode",
+      "source": "interactive-mode",
+      "target": "voice-dictation"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "fullscreen.md",
+      "_src": "fullscreen",
+      "_tgt": "interactive-mode",
+      "source": "interactive-mode",
+      "target": "fullscreen"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "computer-use.md",
+      "_src": "computer-use",
+      "_tgt": "interactive-mode",
+      "source": "interactive-mode",
+      "target": "computer-use"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/github-actions.md",
+      "_src": "github-actions",
+      "_tgt": "code-review",
+      "source": "code-review",
+      "target": "github-actions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/github-enterprise-server.md",
+      "_src": "github-enterprise-server",
+      "_tgt": "code-review",
+      "source": "code-review",
+      "target": "github-enterprise-server"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w14.md",
+      "_src": "whats-new__2026-w14",
+      "_tgt": "computer-use",
+      "source": "computer-use",
+      "target": "whats-new__2026-w14"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w13.md",
+      "_src": "whats-new__2026-w13",
+      "_tgt": "fullscreen",
+      "source": "fullscreen",
+      "target": "whats-new__2026-w13"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w14.md",
+      "_src": "whats-new__2026-w14",
+      "_tgt": "fullscreen",
+      "source": "fullscreen",
+      "target": "whats-new__2026-w14"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "graphify-out/.preprocessed/costs.md",
+      "_src": "costs",
+      "_tgt": "analytics",
+      "source": "costs",
+      "target": "analytics"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "graphify-out/.preprocessed/troubleshooting.md",
+      "_src": "troubleshooting",
+      "_tgt": "costs",
+      "source": "costs",
+      "target": "troubleshooting"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/github-enterprise-server.md",
+      "_src": "github-enterprise-server",
+      "_tgt": "analytics",
+      "source": "analytics",
+      "target": "github-enterprise-server"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/scheduled-tasks.md",
+      "_src": "scheduled-tasks",
+      "_tgt": "github-actions",
+      "source": "scheduled-tasks",
+      "target": "github-actions"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "graphify-out/.preprocessed/scheduled-tasks.md",
+      "_src": "scheduled-tasks",
+      "_tgt": "remote-control",
+      "source": "scheduled-tasks",
+      "target": "remote-control"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "graphify-out/.preprocessed/remote-control.md",
+      "_src": "remote-control",
+      "_tgt": "ultraplan",
+      "source": "remote-control",
+      "target": "ultraplan"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new__2026-w15.md",
+      "_src": "whats-new__2026-w15",
+      "_tgt": "ultraplan",
+      "source": "ultraplan",
+      "target": "whats-new__2026-w15"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "graphify-out/.preprocessed/github-actions.md",
+      "_src": "github-actions",
+      "_tgt": "github-enterprise-server",
+      "source": "github-actions",
+      "target": "github-enterprise-server"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "graphify-out/.preprocessed/github-actions.md",
+      "_src": "github-actions",
+      "_tgt": "gitlab-ci-cd",
+      "source": "github-actions",
+      "target": "gitlab-ci-cd"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new.md",
+      "_src": "whats-new",
+      "_tgt": "whats-new__2026-w15",
+      "source": "whats-new",
+      "target": "whats-new__2026-w15"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new.md",
+      "_src": "whats-new",
+      "_tgt": "whats-new__2026-w14",
+      "source": "whats-new",
+      "target": "whats-new__2026-w14"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/.preprocessed/whats-new.md",
+      "_src": "whats-new",
+      "_tgt": "whats-new__2026-w13",
+      "source": "whats-new",
+      "target": "whats-new__2026-w13"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "graphify-out/.preprocessed/whats-new.md",
+      "_src": "whats-new__2026-w13",
+      "_tgt": "whats-new__2026-w14",
+      "source": "whats-new__2026-w13",
+      "target": "whats-new__2026-w14"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "graphify-out/.preprocessed/whats-new.md",
+      "_src": "whats-new__2026-w14",
+      "_tgt": "whats-new__2026-w15",
+      "source": "whats-new__2026-w14",
+      "target": "whats-new__2026-w15"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "sdk_dual_language_implementation",
+      "label": "Python and TypeScript SDK Parallel Implementations",
+      "nodes": [
+        "agent-sdk__python",
+        "agent-sdk__typescript",
+        "agent-sdk__overview",
+        "agent-sdk__quickstart"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95
+    },
+    {
+      "id": "agent_loop_execution_lifecycle",
+      "label": "Agent Loop Execution Lifecycle (turns, messages, tools, result)",
+      "nodes": [
+        "agent-sdk__agent-loop",
+        "agent-sdk__hooks",
+        "agent-sdk__permissions",
+        "agent-sdk__cost-tracking",
+        "overview_result_message",
+        "overview_builtin_tools"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "session_continuity_patterns",
+      "label": "Session Continuity Patterns (resume, continue, fork, V2 sessions)",
+      "nodes": [
+        "agent-sdk__sessions",
+        "overview_claude_sdk_client",
+        "overview_v2_session",
+        "agent-sdk__typescript-v2-preview"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "tool_extensibility",
+      "label": "Tool Extensibility System",
+      "nodes": [
+        "agent-sdk__custom-tools",
+        "agent-sdk__mcp",
+        "agent-sdk__tool-search"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "security_and_permissions",
+      "label": "Security and Permissions Layer",
+      "nodes": [
+        "agent-sdk__permissions",
+        "agent-sdk__hooks",
+        "agent-sdk__secure-deployment"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "agent_composition",
+      "label": "Agent Composition and Extension",
+      "nodes": [
+        "agent-sdk__subagents",
+        "agent-sdk__skills",
+        "agent-sdk__plugins"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "he_security_layer",
+      "label": "Security and access control layer",
+      "nodes": [
+        "permissions",
+        "permission-modes",
+        "sandboxing",
+        "security",
+        "hooks"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "he_data_governance",
+      "label": "Data governance and compliance",
+      "nodes": [
+        "data-usage",
+        "zero-data-retention",
+        "legal-and-compliance"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "he_trust_and_auth",
+      "label": "Trust, authentication, and privacy",
+      "nodes": [
+        "authentication",
+        "security",
+        "data-usage",
+        "legal-and-compliance"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "he_plugin_ecosystem",
+      "label": "Plugin Ecosystem",
+      "nodes": [
+        "plugins",
+        "plugins-reference",
+        "plugin-marketplaces",
+        "discover-plugins"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "id": "he_extensibility_layer",
+      "label": "Claude Code Extensibility Layer",
+      "nodes": [
+        "mcp",
+        "plugins",
+        "skills",
+        "channels",
+        "tools-reference"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "he_agent_orchestration",
+      "label": "Agent Orchestration System",
+      "nodes": [
+        "sub-agents",
+        "agent-teams",
+        "skills",
+        "routines"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8
+    },
+    {
+      "id": "he-config-hierarchy",
+      "label": "Configuration Hierarchy",
+      "nodes": [
+        "settings",
+        "server-managed-settings",
+        "env-vars",
+        "claude-directory"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "he-model-performance",
+      "label": "Model and Performance Tuning",
+      "nodes": [
+        "model-config",
+        "fast-mode",
+        "context-window"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "he-ui-customization",
+      "label": "UI Customization",
+      "nodes": [
+        "terminal-config",
+        "keybindings",
+        "statusline",
+        "output-styles"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "he_cloud_providers",
+      "label": "Third-party cloud provider integrations",
+      "nodes": [
+        "amazon-bedrock",
+        "google-vertex-ai",
+        "microsoft-foundry",
+        "third-party-integrations",
+        "llm-gateway"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "he_ide_integrations",
+      "label": "IDE and editor integrations for Claude Code",
+      "nodes": [
+        "vs-code",
+        "jetbrains",
+        "desktop",
+        "platforms"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "he_web_cloud_sessions",
+      "label": "Web and cloud session ecosystem",
+      "nodes": [
+        "claude-code-on-the-web",
+        "web-quickstart",
+        "slack",
+        "desktop-scheduled-tasks"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "getting-started-journey",
+      "label": "Getting Started Journey",
+      "nodes": [
+        "overview",
+        "quickstart",
+        "setup"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "core-usage-patterns",
+      "label": "Core Usage Patterns",
+      "nodes": [
+        "common-workflows",
+        "best-practices",
+        "how-claude-code-works",
+        "interactive-mode",
+        "cli-reference"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "terminal-experience-features",
+      "label": "Terminal Experience Features",
+      "nodes": [
+        "interactive-mode",
+        "voice-dictation",
+        "fullscreen",
+        "cli-reference"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85
+    },
+    {
+      "id": "he_ops_monitoring",
+      "label": "Operations and cost monitoring",
+      "nodes": [
+        "costs",
+        "monitoring-usage",
+        "analytics"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "he_ci_cd_integration",
+      "label": "CI/CD platform integrations",
+      "nodes": [
+        "github-actions",
+        "gitlab-ci-cd",
+        "github-enterprise-server"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9
+    },
+    {
+      "id": "he_remote_access",
+      "label": "Remote and cloud session access",
+      "nodes": [
+        "remote-control",
+        "ultraplan",
+        "scheduled-tasks"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85
+    }
+  ]
+}

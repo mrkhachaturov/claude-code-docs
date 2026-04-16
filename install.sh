@@ -1,10 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
-# Claude Code Docs Installer v0.3.3 - Changelog integration and compatibility improvements
+# Claude Code Docs Installer v0.1.0 - Knowledge graph + rule + skill integration
+# Fork of ericbuess/claude-code-docs with graphify knowledge graph layer
 # This script installs/migrates claude-code-docs to ~/.claude-code-docs
 
-echo "Claude Code Docs Installer v0.3.3"
+echo "Claude Code Docs Installer v0.1.0"
 echo "==============================="
 
 # Fixed installation location
@@ -135,7 +136,7 @@ migrate_installation() {
     
     # Fresh install at new location
     echo "Installing fresh at ~/.claude-code-docs..."
-    git clone -b "$INSTALL_BRANCH" https://github.com/ericbuess/claude-code-docs.git "$INSTALL_DIR"
+    git clone -b "$INSTALL_BRANCH" https://github.com/mrkhachaturov/claude-code-docs.git "$INSTALL_DIR"
     cd "$INSTALL_DIR"
     
     # Remove old directory if safe
@@ -374,14 +375,14 @@ else
         echo "No existing installation found"
         echo "Installing fresh to ~/.claude-code-docs..."
         
-        git clone -b "$INSTALL_BRANCH" https://github.com/ericbuess/claude-code-docs.git "$INSTALL_DIR"
+        git clone -b "$INSTALL_BRANCH" https://github.com/mrkhachaturov/claude-code-docs.git "$INSTALL_DIR"
         cd "$INSTALL_DIR"
     fi
 fi
 
 # Now we're in $INSTALL_DIR, set up the new script-based system
 echo ""
-echo "Setting up Claude Code Docs v0.3.3..."
+echo "Setting up Claude Code Docs v0.1.0..."
 
 # Copy helper script from template
 echo "Installing helper script..."
@@ -453,44 +454,54 @@ EOF
 
 echo "✓ Created /docs command"
 
-# Always update hook (remove old ones pointing to wrong location)
-echo "Setting up automatic updates..."
-
-# Simple hook that just calls the helper script
-HOOK_COMMAND="~/.claude-code-docs/claude-docs-helper.sh hook-check"
-
+# Remove legacy PreToolUse hook (was a no-op in v0.3.x, adds latency for nothing)
 if [ -f ~/.claude/settings.json ]; then
-    # Update existing settings.json
-    echo "  Updating Claude settings..."
-    
-    # First remove ALL hooks that contain "claude-code-docs" anywhere in the command
-    # This catches old installations at any path
-    jq '.hooks.PreToolUse = [(.hooks.PreToolUse // [])[] | select(.hooks[0].command | contains("claude-code-docs") | not)]' ~/.claude/settings.json > ~/.claude/settings.json.tmp
-    
-    # Then add our new hook
-    jq --arg cmd "$HOOK_COMMAND" '.hooks.PreToolUse = [(.hooks.PreToolUse // [])[]] + [{"matcher": "Read", "hooks": [{"type": "command", "command": $cmd}]}]' ~/.claude/settings.json.tmp > ~/.claude/settings.json
-    rm -f ~/.claude/settings.json.tmp
-    echo "✓ Updated Claude settings"
-else
-    # Create new settings.json
-    echo "  Creating Claude settings..."
-    jq -n --arg cmd "$HOOK_COMMAND" '{
-        "hooks": {
-            "PreToolUse": [
-                {
-                    "matcher": "Read",
-                    "hooks": [
-                        {
-                            "type": "command",
-                            "command": $cmd
-                        }
-                    ]
-                }
-            ]
-        }
-    }' > ~/.claude/settings.json
-    echo "✓ Created Claude settings"
+    if jq -e '.hooks.PreToolUse[]? | select(.hooks[0].command | contains("claude-code-docs"))' ~/.claude/settings.json >/dev/null 2>&1; then
+        echo "Removing legacy PreToolUse hook..."
+        jq '.hooks.PreToolUse = [(.hooks.PreToolUse // [])[] | select(.hooks[0].command | contains("claude-code-docs") | not)]' ~/.claude/settings.json > ~/.claude/settings.json.tmp
+        # Clean up empty structures
+        jq 'if .hooks.PreToolUse == [] then .hooks |= del(.PreToolUse) else . end | if .hooks == {} then del(.hooks) else . end' ~/.claude/settings.json.tmp > ~/.claude/settings.json
+        rm -f ~/.claude/settings.json.tmp
+        echo "✓ Removed legacy hook"
+    fi
 fi
+
+# Install user-level rule (always-on graph awareness — loads every session, ~20 lines)
+echo "Setting up documentation rule..."
+mkdir -p ~/.claude/rules
+cat > ~/.claude/rules/claude-code-docs.md << 'RULE_EOF'
+## Claude Code Documentation Knowledge Graph
+
+A knowledge graph of the official Claude Code documentation is available at
+`~/.claude-code-docs/`. Use it to answer questions about Claude Code features,
+configuration, hooks, permissions, settings, best practices, and the Agent SDK.
+
+### Navigation (3 levels - use the lightest level that answers the question)
+
+1. **Graph overview** `~/.claude-code-docs/graphify-out/GRAPH_REPORT.md`
+   God nodes, communities, surprising connections. Start here.
+
+2. **Wiki articles** `~/.claude-code-docs/graphify-out/wiki/index.md`
+   One article per topic cluster (~2k words each). Follow links from index.
+
+3. **Raw docs** `~/.claude-code-docs/docs/{topic}.md`
+   Full documentation pages. Only read when you need exact syntax, schemas,
+   or configuration examples that the wiki doesn't cover.
+
+### Rules
+
+- Answer from the graph and wiki first. Only read raw docs for specific details.
+- Graph nodes carry `source_file` — use it to find the matching raw doc.
+- Do not dump entire raw docs into context when a wiki article suffices.
+- For `/docs <topic>` commands, use `~/.claude-code-docs/claude-docs-helper.sh`.
+RULE_EOF
+echo "✓ Created documentation rule"
+
+# Install user-level skill (deep query via /claude-code-docs)
+echo "Setting up documentation skill..."
+mkdir -p ~/.claude/skills/claude-code-docs
+cp "$INSTALL_DIR/skills/claude-code-docs/SKILL.md" ~/.claude/skills/claude-code-docs/SKILL.md
+echo "✓ Created /claude-code-docs skill"
 
 # Note: Do NOT modify docs_manifest.json - it's tracked by git and would break updates
 
@@ -499,19 +510,25 @@ cleanup_old_installations
 
 # Success message
 echo ""
-echo "✅ Claude Code Docs v0.3.3 installed successfully!"
+echo "✅ Claude Code Docs v0.1.0 installed successfully!"
 echo ""
-echo "📚 Command: /docs (user)"
+echo "📚 /docs <topic>            Read a doc directly"
+echo "📊 /claude-code-docs <q>    Query the knowledge graph"
 echo "📂 Location: ~/.claude-code-docs"
 echo ""
-echo "Usage examples:"
-echo "  /docs hooks         # Read hooks documentation"
-echo "  /docs -t           # Check when docs were last updated"
-echo "  /docs what's new  # See recent documentation changes"
+echo "What's installed:"
+echo "  ~/.claude/rules/claude-code-docs.md           Always-on graph awareness"
+echo "  ~/.claude/skills/claude-code-docs/SKILL.md    Deep query skill"
+echo "  ~/.claude/commands/docs.md                    Direct doc reading"
 echo ""
-echo "🔄 Auto-updates: Enabled - syncs automatically when GitHub has newer content"
+echo "Knowledge graph:"
+if [[ -f "$INSTALL_DIR/graphify-out/GRAPH_REPORT.md" ]]; then
+    nodes=$(grep -o '[0-9]* nodes' "$INSTALL_DIR/graphify-out/GRAPH_REPORT.md" | head -1)
+    edges=$(grep -o '[0-9]* edges' "$INSTALL_DIR/graphify-out/GRAPH_REPORT.md" | head -1)
+    communities=$(grep -o '[0-9]* communities' "$INSTALL_DIR/graphify-out/GRAPH_REPORT.md" | head -1)
+    echo "  $nodes · $edges · $communities"
+else
+    echo "  Not built yet. Run: /graphify docs/"
+fi
 echo ""
-echo "Available topics:"
-ls "$INSTALL_DIR/docs" | grep '\.md$' | sed 's/\.md$//' | sort | column -c 60
-echo ""
-echo "⚠️  Note: Restart Claude Code for auto-updates to take effect"
+echo "⚠️  Note: Restart Claude Code for changes to take effect"
