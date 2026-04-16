@@ -1,22 +1,27 @@
-# Claude Code Documentation Mirror
+# Claude Code Documentation Mirror + Knowledge Graph
 
-This repository contains local copies of Claude Code documentation from https://docs.anthropic.com/en/docs/claude-code/
+Local mirror of Claude Code documentation with a graphify knowledge graph layer.
+Docs are updated via GitHub Actions. The graph is rebuilt manually when needed.
 
-The docs are periodically updated via GitHub Actions.
+## Navigation
 
-## For /docs Command
+1. **Graph overview** — `graphify-out/GRAPH_REPORT.md` (god nodes, communities)
+2. **Wiki articles** — `graphify-out/wiki/index.md` (one article per topic cluster)
+3. **Raw docs** — `docs/{topic}.md` (full documentation pages)
 
-When responding to /docs commands:
-1. Follow the instructions in the docs.md command file
-2. Read documentation files from the docs/ directory only
-3. Use the manifest to know available topics
+Use the lightest level that answers the question. Do not read raw docs when
+the wiki article suffices.
 
-## Files to ultrathink about
+## Rebuilding the graph
 
+```bash
+python scripts/preprocess-for-graphify.py
+# Then run /graphify graphify-out/.preprocessed/ --mode deep --wiki
+```
+
+## Key files
+
+@scripts/preprocess-for-graphify.py
+@skills/claude-code-docs/SKILL.md
 @install.sh
-@README.md
-@uninstall.sh
-@UNINSTALL.md
-@claude-docs-helper.md
-@scripts/
-@.github/workflows/
+@.graphifyignore
