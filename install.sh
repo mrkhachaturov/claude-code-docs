@@ -497,27 +497,17 @@ cat > ~/.claude/rules/claude-code-docs.md << 'RULE_EOF'
 ## Claude Code Documentation Knowledge Graph
 
 A knowledge graph of the official Claude Code documentation is available at
-`~/.claude-code-docs/`. Use it to answer questions about Claude Code features,
-configuration, hooks, permissions, settings, best practices, and the Agent SDK.
+`~/.claude-code-docs/graphify-out/graph.json` (117 nodes, 409 edges).
 
-### Navigation (3 levels - use the lightest level that answers the question)
+When answering questions about Claude Code features, configuration, hooks,
+permissions, settings, best practices, or the Agent SDK:
 
-1. **Graph overview** `~/.claude-code-docs/graphify-out/GRAPH_REPORT.md`
-   God nodes, communities, surprising connections. Start here.
-
-2. **Wiki articles** `~/.claude-code-docs/graphify-out/wiki/index.md`
-   One article per topic cluster (~2k words each). Follow links from index.
-
-3. **Raw docs** `~/.claude-code-docs/docs/{topic}.md`
-   Full documentation pages. Only read when you need exact syntax, schemas,
-   or configuration examples that the wiki doesn't cover.
-
-### Rules
-
-- Answer from the graph and wiki first. Only read raw docs for specific details.
-- Graph nodes carry `source_file` — use it to find the matching raw doc.
-- Do not dump entire raw docs into context when a wiki article suffices.
-- For `/docs <topic>` commands, use `~/.claude-code-docs/claude-docs-helper.sh`.
+1. **Use the `/claude-code-docs` skill** — it runs BFS/DFS traversal on the
+   graph and returns only the relevant subgraph (nodes + edges + source files).
+2. **Only read raw docs** (`~/.claude-code-docs/docs/{file}.md`) when you need
+   exact syntax, JSON schemas, or config examples the graph doesn't cover.
+3. **Do not read wiki articles or GRAPH_REPORT.md as a substitute for traversal.**
+   The graph IS the navigation — traverse it, don't read summaries about it.
 RULE_EOF
 echo "✓ Created documentation rule"
 
