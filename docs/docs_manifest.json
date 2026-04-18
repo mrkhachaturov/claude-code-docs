@@ -388,8 +388,8 @@
     "hooks.md": {
       "original_url": "https://code.claude.com/docs/en/hooks",
       "original_md_url": "https://code.claude.com/docs/en/hooks.md",
-      "hash": "92859ca4d38ec855f545968baccb9208a89cf5a1678ef651ec44616820b3d0ad",
-      "last_updated": "2026-04-16T21:16:48.157054"
+      "hash": "124344dc4896d480638c4ce20c7e77be5d68b2afc0c5150ed0dfe6388709754a",
+      "last_updated": "2026-04-18T00:24:27.084275"
     },
     "hooks-guide.md": {
       "original_url": "https://code.claude.com/docs/en/hooks-guide",
@@ -687,8 +687,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-04-17T21:16:46.722611",
-    "fetch_duration_seconds": 66.900455,
+    "last_fetch_completed": "2026-04-18T00:24:54.294791",
+    "fetch_duration_seconds": 64.126483,
     "total_pages_discovered": 114,
     "pages_fetched_successfully": 115,
     "pages_failed": 0,
@@ -698,7 +698,7 @@
     "total_files": 114,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2026-04-17T21:16:46.722632",
+  "last_updated": "2026-04-18T00:24:54.294821",
   "base_url": "https://raw.githubusercontent.com/mrkhachaturov/claude-code-docs/main/docs/",
   "github_repository": "mrkhachaturov/claude-code-docs",
   "github_ref": "main",
