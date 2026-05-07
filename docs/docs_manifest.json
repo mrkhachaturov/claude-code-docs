@@ -165,8 +165,8 @@
     "agent-sdk__typescript.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript",
       "original_md_url": "https://code.claude.com/docs/en/agent-sdk/typescript.md",
-      "hash": "72ba6226394cb3233e37752fa9c270058705c00e2890502c39ebb358d8a54a66",
-      "last_updated": "2026-05-07T09:51:44.661260"
+      "hash": "0e9e1b03752635ccd1412ba28c502951876c55a8f4b2b0b67b670ff26ba6214c",
+      "last_updated": "2026-05-07T12:37:12.298186"
     },
     "agent-sdk__typescript-v2-preview.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript-v2-preview",
@@ -747,8 +747,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-07T09:52:35.790601",
-    "fetch_duration_seconds": 65.698538,
+    "last_fetch_completed": "2026-05-07T12:38:03.457848",
+    "fetch_duration_seconds": 65.682698,
     "total_pages_discovered": 124,
     "pages_fetched_successfully": 125,
     "pages_failed": 0,
@@ -758,7 +758,7 @@
     "total_files": 124,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2026-05-07T09:52:35.790628",
+  "last_updated": "2026-05-07T12:38:03.457879",
   "base_url": "https://raw.githubusercontent.com/mrkhachaturov/claude-code-docs/main/docs/",
   "github_repository": "mrkhachaturov/claude-code-docs",
   "github_ref": "main",
